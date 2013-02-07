@@ -19,12 +19,12 @@
 				<Linker>
 					<Add option="`pkg-config --libs libenet`" />
 					<Add option="`pkg-config --cflags --libs sigc++-2.0`" />
-					<Add library="Data\Libraries_linux64\libsfml-system.so" />
-					<Add library="Data\Libraries_linux64\libsfml-window.so" />
-					<Add library="Data\Libraries_linux64\libsfml-graphics.so" />
-					<Add library="Data\Libraries_linux64\libsfml-audio.so" />
-					<Add library="Data\Libraries_linux64\libsfml-network.so" />
-					<Add library="Data\Libraries_linux64\libawesomium-1.6.5.so" />
+					<Add library="Data/Libraries_linux64/libsfml-system.so" />
+					<Add library="Data/Libraries_linux64/libsfml-window.so" />
+					<Add library="Data/Libraries_linux64/libsfml-graphics.so" />
+					<Add library="Data/Libraries_linux64/libsfml-audio.so" />
+					<Add library="Data/Libraries_linux64/libsfml-network.so" />
+					<Add library="Data/Libraries_linux64/libawesomium-1.6.5.so" />
 				</Linker>
 				<ExtraCommands>
 					<Add after="cp -r Data/ bin/Linux64Debug/" />
@@ -45,12 +45,12 @@
 					<Add option="-s" />
 					<Add option="`pkg-config --libs libenet`" />
 					<Add option="`pkg-config --cflags --libs sigc++-2.0`" />
-					<Add library="Data\Libraries_linux64\libsfml-system.so" />
-					<Add library="Data\Libraries_linux64\libsfml-window.so" />
-					<Add library="Data\Libraries_linux64\libsfml-graphics.so" />
-					<Add library="Data\Libraries_linux64\libsfml-audio.so" />
-					<Add library="Data\Libraries_linux64\libsfml-network.so" />
-					<Add library="Data\Libraries_linux64\libawesomium-1.6.5.so" />
+					<Add library="Data/Libraries_linux64/libsfml-system.so" />
+					<Add library="Data/Libraries_linux64/libsfml-window.so" />
+					<Add library="Data/Libraries_linux64/libsfml-graphics.so" />
+					<Add library="Data/Libraries_linux64/libsfml-audio.so" />
+					<Add library="Data/Libraries_linux64/libsfml-network.so" />
+					<Add library="Data/Libraries_linux64/libawesomium-1.6.5.so" />
 				</Linker>
 				<ExtraCommands>
 					<Add after="cp -r Data/ bin/Linux64Release/" />
@@ -80,15 +80,16 @@
 		<Unit filename="include/CNetworkManager.h" />
 		<Unit filename="include/CPacketHandler.h" />
 		<Unit filename="include/CPacketSender.h" />
-		<Unit filename="include/CRWidget.h" />
 		<Unit filename="include/CStringContainer.h" />
 		<Unit filename="include/CStringExt.h" />
 		<Unit filename="include/CTexture.h" />
 		<Unit filename="include/CTextureManager.h" />
 		<Unit filename="include/CWebViewDrawable.h" />
+		<Unit filename="include/CreationUI/CRContainerWidget.h" />
 		<Unit filename="include/CreationUI/CREvent.h" />
 		<Unit filename="include/CreationUI/CRMouseEvent.h" />
 		<Unit filename="include/CreationUI/CRTextEntered.h" />
+		<Unit filename="include/CreationUI/CRWidget.h" />
 		<Unit filename="include/CreationUI/CRWindow.h" />
 		<Unit filename="include/CreationUI/CreationUI.h" />
 		<Unit filename="include/IPConverter.h" />
@@ -105,15 +106,16 @@
 		<Unit filename="src/CGame/onUpdate.cpp" />
 		<Unit filename="src/CNetworkManager.cpp" />
 		<Unit filename="src/CPacketHandler.cpp" />
-		<Unit filename="src/CRWidget.cpp" />
 		<Unit filename="src/CStringContainer.cpp" />
 		<Unit filename="src/CStringExt.cpp" />
 		<Unit filename="src/CTexture.cpp" />
 		<Unit filename="src/CTextureManager.cpp" />
 		<Unit filename="src/CWebViewDrawable.cpp" />
+		<Unit filename="src/CreationUI/CRContainerWidget.cpp" />
 		<Unit filename="src/CreationUI/CREvent.cpp" />
 		<Unit filename="src/CreationUI/CRMouseEvent.cpp" />
 		<Unit filename="src/CreationUI/CRTextEntered.cpp" />
+		<Unit filename="src/CreationUI/CRWidget.cpp" />
 		<Unit filename="src/CreationUI/CRWindow.cpp" />
 		<Unit filename="src/CreationUI/CreationUI.cpp" />
 		<Unit filename="src/IPConverter.cpp" />
