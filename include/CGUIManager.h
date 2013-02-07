@@ -3,8 +3,6 @@
 
 #include <SFML/Graphics.hpp>
 #include <string>
-#include <Awesomium/WebCore.h>
-#include <Awesomium/WebView.h>
 #include <vector>
 #include <CWebViewDrawable.h>
 #include <memory>
