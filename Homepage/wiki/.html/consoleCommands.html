@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
+    "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+      xmlns:dc="http://purl.org/dc/elements/1.1/"
+      xmlns:foaf="http://xmlns.com/foaf/0.1/">
+  
+  <head>
+    
+    
+      
+        <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+      
+      
+      <title>
+        
+        Console Commands
+      </title>
+      
+      
+        <!-- YUI CSS reset, fonts, base -->
+        <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/combo?3.0.0/build/cssreset/reset-min.css&amp;3.0.0/build/cssfonts/fonts-min.css&amp;3.0.0/build/cssbase/base-min.css" media="screen, projection" />
+        
+        <link rel="stylesheet" type="text/css" href="media/css/style.css" media="screen, projection" />
+        <link rel="stylesheet" type="text/css" href="media/css/pygments.css" media="screen, projection" />
+      
+      
+      
+      
+      
+        
+      
+    
+  </head>
+  
+  <body >
+    
+      
+      
+        
+          
+  
+    <ol id="breadcrumbs">
+      
+        <li class="crumb-0 not-last">
+          
+            <a href="./">index</a>
+          
+        </li>
+      
+        <li class="crumb-1 last">
+          
+            consoleCommands
+          
+        </li>
+      
+    </ol> <!-- ol#breadcrumbs -->
+  
+
+        
+      
+      
+      <div id="content">
+        
+        
+        
+        <h1>Console Commands</h1>
+<p>Console commands are issued with the syntax <code>/command option1 option2 ...</code>
+and are executed if the applied chat-handler has an event attached to 
+them.</p>
+<ul>
+<li>
+<p><strong>/serverStats</strong></p>
+<p>Gets some statistics from the server (speed, ping, etc) and 
+outputs it into the lokal chat.</p>
+</li>
+<li>
+<p><strong>/admin <Password></strong></p>
+<p>Logs in as admin of the game. The password is given at server-startup.
+The server-starter is automatically an admin, but the other
+users have to use this command to get the admin-flag.</p>
+</li>
+<li>
+<p><strong>/downloadLog <filename></strong></p>
+<p>Downloads the log of the current game. This log contains all the 
+commands issued by the players &amp; the admins. The log is in the 
+format <code>[DD-MM-YYYY MM:SS] [&lt;USER&gt;] &lt;logged action&gt;</code>. Because
+the log is too long for the local chat, it is saved to the specified
+filename.</p>
+</li>
+<li>
+<p><strong>/kick <User> <Why></strong> (admin)</p>
+<p>Suddenly disconnects the specified user for the reason specified
+in <Why>. The reason is displayed when the player gets thrown
+to his start-screen in an additional GUI-Window. </p>
+</li>
+<li>
+<p><strong>/say <What to say></strong> (admin)</p>
+<p>Broadcast the message to all players (anonymous for them but logged)</p>
+</li>
+<li>
+<p><strong>/reset</strong> (admin)</p>
+<p>Resets the game to the beginning. </p>
+</li>
+</ul>
+        
+        
+        
+        
+        <hr class="clear" />
+      </div> <!-- div#content -->
+      
+      
+      <div id="footer">
+        <p>
+          
+          Powered by <a href="http://markdoc.org/">Markdoc</a>.
+        </p>
+      </div>
+      
+    
+    
+    
+    <hr class="clear" />
+  </body>
+</html>

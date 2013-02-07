@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
+    "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+      xmlns:dc="http://purl.org/dc/elements/1.1/"
+      xmlns:foaf="http://xmlns.com/foaf/0.1/">
+  
+  <head>
+    
+    
+      
+        <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+      
+      
+      <title>
+        
+        Server Configuration &amp; Game Setup
+      </title>
+      
+      
+        <!-- YUI CSS reset, fonts, base -->
+        <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/combo?3.0.0/build/cssreset/reset-min.css&amp;3.0.0/build/cssfonts/fonts-min.css&amp;3.0.0/build/cssbase/base-min.css" media="screen, projection" />
+        
+        <link rel="stylesheet" type="text/css" href="media/css/style.css" media="screen, projection" />
+        <link rel="stylesheet" type="text/css" href="media/css/pygments.css" media="screen, projection" />
+      
+      
+      
+      
+      
+        
+      
+    
+  </head>
+  
+  <body >
+    
+      
+      
+        
+          
+  
+    <ol id="breadcrumbs">
+      
+        <li class="crumb-0 not-last">
+          
+            <a href="./">index</a>
+          
+        </li>
+      
+        <li class="crumb-1 last">
+          
+            serverSetupAndConfiguration
+          
+        </li>
+      
+    </ol> <!-- ol#breadcrumbs -->
+  
+
+        
+      
+      
+      <div id="content">
+        
+        
+        
+        <h1>Server Configuration &amp; Game Setup</h1>
+<h2>Simple Steps</h2>
+<ol>
+<li>
+<p>The Client sends a <code>PTYPE_FULLCONNECTION</code> package to the 
+    server and logs himself in.</p>
+</li>
+<li>
+<p>The server initializes the player in the internal array.</p>
+</li>
+<li>
+<p>The player sends his messages and commands to the server, 
+    the server interprets them.</p>
+</li>
+<li>
+<p>The game is running - server and client are exchainging 
+    packets with each other.</p>
+</li>
+</ol>
+<h2>Server-Configuration (Detailed)</h2>
+<p>The Server-Config is done through a GUI-Window, which automaticly sends
+packets to the server to execute the set configuration.</p>
+<p>In addition, the client is also able to issue console-commands through
+a simple input-line with the syntax <code>/command option1 option2 ...</code>. </p>
+<p>When the server is fully configurated, the game can start. This part 
+could be a little bit of a fun-braker, because people usually want to play
+and not to config servers. The standard-config has to fit very good, 
+and every extremely customized configuration-feature should be hidden
+into an additional window or under a notebook-tab. </p>
+<p>Every configuration-option which is not really important could also be
+configured through the commandline interface, which doesn't require coding
+on the client side (server-only). The benefit is clear, but the downsides 
+are: Less access to the functions, less information, uglier interface, 
+and the complete bloat of the thing at the end.</p>
+        
+        
+        
+        
+        <hr class="clear" />
+      </div> <!-- div#content -->
+      
+      
+      <div id="footer">
+        <p>
+          
+          Powered by <a href="http://markdoc.org/">Markdoc</a>.
+        </p>
+      </div>
+      
+    
+    
+    
+    <hr class="clear" />
+  </body>
+</html>

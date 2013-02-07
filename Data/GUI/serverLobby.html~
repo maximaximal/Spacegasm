@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Server Lobby</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.min.css">
+    <link rel="stylesheet" type="text/css" href="css/format.css">
+</head>
+<body onload="onLoad()"> 
+    <div class="navbar">
+        <div class="navbar-inner">
+            <div class="container-fluid">
+                <ul class="nav" role="navigation">
+                    <li class="dropdown">
+                        <a id="dropdownGame" class="dropdown-toggle" data-toggle="dropdown" role="button" href="#">
+                            Game
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownGame">
+                            <li>
+                                <a href="#">Hallo!</a>
+                            </li>
+                            <li>
+                                <a href="#">Hallo!</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container-fluid">
+        <div class="span6">
+            <h1>Server Connected!</h1>
+            <h4>Server-IP: <span id="serverinfo_IP"></span></h4>
+            <h4>Username: <span id="serverinfo_Username"></span></h4>
+        </div>
+        <div class="span6">
+            <div class="well" id="chat_body"></div>
+            <form class="form-inline" name="Chat">
+                <div class="row">
+                    <input type="text" class="input-small" style="width: 100%;" name="Msg" placeholder="Message">
+                    <a class="btn btn-small pull-right" onclick="sendChatMessage();">Send</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/serverLobby.js"></script>
+</body>
+</html>

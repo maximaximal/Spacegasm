@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Spacegasm-Server" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Option virtualFolders="src/;" />
+		<Build>
+			<Target title="Linux64Debug">
+				<Option output="../bin/Linux64Debug/Spacegasm-Server" prefix_auto="1" extension_auto="1" />
+				<Option object_output="../obj/Linux64Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-std=c++11" />
+					<Add option="-g" />
+					<Add option="`pkg-config --cflags sigc++-2.0`" />
+					<Add directory="../SFML/include" />
+				</Compiler>
+				<Linker>
+					<Add option="`pkg-config --libs libenet`" />
+					<Add option="`pkg-config --libs sigc++-2.0`" />
+					<Add library="../Data/Libraries_linux64/libsfml-system.so" />
+					<Add library="../Data/Libraries_linux64/libsfml-network.so" />
+				</Linker>
+			</Target>
+			<Target title="Linux64Release">
+				<Option output="../bin/Linux64Release/Spacegasm-Server" prefix_auto="1" extension_auto="1" />
+				<Option object_output="../obj/Linux64Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-std=c++11" />
+					<Add option="`pkg-config --cflags sigc++-2.0`" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="`pkg-config --libs libenet`" />
+					<Add option="`pkg-config --libs sigc++-2.0`" />
+					<Add library="../Data/Libraries_linux64/libsfml-system.so" />
+					<Add library="../Data/Libraries_linux64/libsfml-network.so" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+			<Add directory="../include" />
+			<Add directory="../SFML/include" />
+			<Add directory="include" />
+		</Compiler>
+		<Unit filename="../include/CPacketHandler.h" />
+		<Unit filename="../include/CPacketSender.h" />
+		<Unit filename="../include/CPlayerData.h">
+			<Option virtualFolder="src/" />
+		</Unit>
+		<Unit filename="../include/CSingleton.h" />
+		<Unit filename="../include/pugiconfig.hpp" />
+		<Unit filename="../include/pugixml.hpp" />
+		<Unit filename="../src/CPacketHandler.cpp" />
+		<Unit filename="../src/CPlayerData.cpp" />
+		<Unit filename="../src/IPConverter.cpp" />
+		<Unit filename="../src/pugixml.cpp" />
+		<Unit filename="include/CChatManager.h" />
+		<Unit filename="include/CPeerManager.h" />
+		<Unit filename="include/CPlayerManager.h" />
+		<Unit filename="include/CServer.h" />
+		<Unit filename="server_main.cpp" />
+		<Unit filename="src/CChatManager.cpp" />
+		<Unit filename="src/CPeerManager.cpp" />
+		<Unit filename="src/CPlayerManager.cpp" />
+		<Unit filename="src/CServer/CServer.cpp" />
+		<Unit filename="src/CServer/onExit.cpp" />
+		<Unit filename="src/CServer/onInit.cpp" />
+		<Unit filename="src/CServer/onUpdate.cpp" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

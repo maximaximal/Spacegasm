@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Spacegasm-Client" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Linux64Debug">
+				<Option output="bin/Linux64Debug/Spacegasm-Client" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Linux64Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-std=c++11" />
+					<Add option="-g" />
+					<Add option="`pkg-config --cflags sigc++-2.0`" />
+				</Compiler>
+				<Linker>
+					<Add option="`pkg-config --libs libenet`" />
+					<Add option="`pkg-config --cflags --libs sigc++-2.0`" />
+					<Add library="Data/Libraries_linux64/libsfml-system.so" />
+					<Add library="Data/Libraries_linux64/libsfml-window.so" />
+					<Add library="Data/Libraries_linux64/libsfml-graphics.so" />
+					<Add library="Data/Libraries_linux64/libsfml-audio.so" />
+					<Add library="Data/Libraries_linux64/libsfml-network.so" />
+					<Add library="Data/Libraries_linux64/libawesomium-1.6.5.so" />
+				</Linker>
+				<ExtraCommands>
+					<Add after="cp -r Data/ bin/Linux64Debug/" />
+					<Mode after="always" />
+				</ExtraCommands>
+			</Target>
+			<Target title="Linux64Release">
+				<Option output="bin/Linux64Release/Spacegasm-Client" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Linux64Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O3" />
+					<Add option="-std=c++11" />
+					<Add option="`pkg-config --cflags sigc++-2.0`" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="`pkg-config --libs libenet`" />
+					<Add option="`pkg-config --cflags --libs sigc++-2.0`" />
+					<Add library="Data/Libraries_linux64/libsfml-system.so" />
+					<Add library="Data/Libraries_linux64/libsfml-window.so" />
+					<Add library="Data/Libraries_linux64/libsfml-graphics.so" />
+					<Add library="Data/Libraries_linux64/libsfml-audio.so" />
+					<Add library="Data/Libraries_linux64/libsfml-network.so" />
+					<Add library="Data/Libraries_linux64/libawesomium-1.6.5.so" />
+				</Linker>
+				<ExtraCommands>
+					<Add after="cp -r Data/ bin/Linux64Release/" />
+					<Mode after="always" />
+				</ExtraCommands>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+			<Add directory="SFML/include" />
+			<Add directory="include" />
+		</Compiler>
+		<Unit filename="client_main.cpp" />
+		<Unit filename="include/CGUIManager.h" />
+		<Unit filename="include/CGame.h" />
+		<Unit filename="include/CNetworkManager.h" />
+		<Unit filename="include/CPacketHandler.h" />
+		<Unit filename="include/CPacketSender.h" />
+		<Unit filename="include/CStringContainer.h" />
+		<Unit filename="include/CStringExt.h" />
+		<Unit filename="include/CTexture.h" />
+		<Unit filename="include/CTextureManager.h" />
+		<Unit filename="include/CWebViewDrawable.h" />
+		<Unit filename="include/IPConverter.h" />
+		<Unit filename="include/Windows/CLoginWindow.h" />
+		<Unit filename="include/Windows/CServerLobby.h" />
+		<Unit filename="include/pugiconfig.hpp" />
+		<Unit filename="include/pugixml.hpp" />
+		<Unit filename="src/CGUIManager.cpp" />
+		<Unit filename="src/CGame/CGame.cpp" />
+		<Unit filename="src/CGame/onEvent.cpp" />
+		<Unit filename="src/CGame/onExit.cpp" />
+		<Unit filename="src/CGame/onInit.cpp" />
+		<Unit filename="src/CGame/onRender.cpp" />
+		<Unit filename="src/CGame/onUpdate.cpp" />
+		<Unit filename="src/CNetworkManager.cpp" />
+		<Unit filename="src/CPacketHandler.cpp" />
+		<Unit filename="src/CStringContainer.cpp" />
+		<Unit filename="src/CStringExt.cpp" />
+		<Unit filename="src/CTexture.cpp" />
+		<Unit filename="src/CTextureManager.cpp" />
+		<Unit filename="src/CWebViewDrawable.cpp" />
+		<Unit filename="src/IPConverter.cpp" />
+		<Unit filename="src/Windows/CLoginWindow.cpp" />
+		<Unit filename="src/Windows/CServerLobby.cpp" />
+		<Unit filename="src/pugixml.cpp" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

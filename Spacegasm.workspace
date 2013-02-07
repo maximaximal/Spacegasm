@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_workspace_file>
+	<Workspace title="SFML-Sidescroller">
+		<Project filename="Spacegasm.cbp" />
+		<Project filename="Server/Spacegasm.cbp" />
+	</Workspace>
+</CodeBlocks_workspace_file>
