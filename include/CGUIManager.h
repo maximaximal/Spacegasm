@@ -4,7 +4,6 @@
 #include <SFML/Graphics.hpp>
 #include <string>
 #include <vector>
-#include <CWebViewDrawable.h>
 #include <memory>
 
 class CGUIManager : public sf::Drawable
