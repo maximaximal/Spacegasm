@@ -1,0 +1,14 @@
+<Language>
+
+<!-- MainMenu -->
+	<text id="MAINMENU_TITLE" string="Main Menu"></text>
+	<text id="MAINMENU_WELCOMETEXT" string="Hello and welcome to Spacegasm! Please select an option below to start the game."></text>
+	<text id="MAINMENU_IP" string="Server-IP:"></text>
+	<text id="MAINMENU_USERNAME" string="Username:"></text>
+	<text id="MAINMENU_PASSWORD" string="Password:"></text>
+<!-- Various Strings -->
+	<text id="CONNECT_TO_SERVER" string = "Connect to server"></text>
+	<text id="CONNECT" string = "Connect"></text>
+	<text id="SEND" string="Send"></text>
+	<text id="QUIT" string = "Quit"></text>
+</Language>

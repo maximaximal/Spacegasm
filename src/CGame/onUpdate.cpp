@@ -1,18 +1,18 @@
 #include <CGame.h>
 #include <sigc++/sigc++.h>
 #include <IPConverter.h>
-#include <Windows/CServerLobby.h>
+#include <Windows/ServerConnection.h>
 
 void CGame::onUpdate()
 {
     *m_FrameTime = m_FrameClock->getElapsedTime();
     m_FrameClock->restart();
-    m_guiManager->onUpdate(m_FrameTime->asMilliseconds());
+    m_desktop->Update(m_FrameTime->asSeconds());
     if(m_createLobbyWindow)
     {
-        CServerLobby *lobby = new CServerLobby(window->getSize().x, window->getSize().y, m_guiManager->getCore(), m_networkManager, m_packetHandler);
-        m_guiManager->removeWindow(m_loginWindowID);
-        m_serverLobbyID = m_guiManager->addWindow(lobby);
+        delete w_mainWindow;
+        w_mainWindow = NULL;
+        w_serverConnection = new Window::ServerConnection(m_desktop, this);
         m_createLobbyWindow = false;
     }
 }

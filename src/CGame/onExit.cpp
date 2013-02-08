@@ -7,7 +7,12 @@ void CGame::onExit()
         m_networkManager->stop();
     delete this->m_FrameClock;
     delete this->m_FrameTime;
-    delete m_guiManager;
+    if(w_mainWindow != NULL)
+        delete w_mainWindow;
+    if(w_serverConnection != NULL)
+        delete w_serverConnection;
+    delete m_desktop;
+    delete m_sfgui;
     delete this->window;
     delete m_networkManager;
     delete m_packetHandler;

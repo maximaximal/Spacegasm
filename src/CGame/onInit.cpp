@@ -1,7 +1,7 @@
 #include <CGame.h>
 #include <thread>
-#include <Windows/CLoginWindow.h>
 #include <CTextureManager.h>
+#include <CStringContainer.h>
 
 void CGame::onInit()
 {
@@ -23,11 +23,11 @@ void CGame::onInit()
     m_packetHandler->getEvent(PTYPE_CONSOLE_OUTPUT).connect(sigc::mem_fun(this, &CGame::onConsoleOutput));
     m_networkManager = NULL;
 
-    m_guiManager = new CGUIManager(window->getSize().x, window->getSize().y);
+    CStringContainer::Get()->load("Data/Lang/en.xml");
 
-    CLoginWindow *loginWindow = new CLoginWindow(window->getSize().x, window->getSize().y, m_guiManager->getCore());
-    loginWindow->onLogin().connect(sigc::mem_fun(this, &CGame::connectToIp));
-    m_loginWindowID = m_guiManager->addWindow(loginWindow);
+    m_sfgui = new sfg::SFGUI();
+    m_desktop = new sfg::Desktop();
+    w_mainWindow = new Window::MainMenu(m_desktop, this);
 
     while(m_running)
     {

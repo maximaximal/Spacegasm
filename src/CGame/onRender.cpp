@@ -12,7 +12,7 @@ void CGame::onRender()
     switch(m_state)
     {
         case CGame::State::GUI:
-            window->draw(*m_guiManager);
+            m_sfgui->Display(*window);
             break;
         default:
             cout << "\e[0;41mUnknown Game State!\e[0m" << endl;

@@ -3,7 +3,6 @@
 #include <CNetworkManager.h>
 #include <sigc++/sigc++.h>
 #include <IPConverter.h>
-#include <Windows/CServerLobby.h>
 
 using namespace std;
 
@@ -11,14 +10,18 @@ CGame::CGame()
 {
     this->m_running = true;
     this->window = NULL;
-    this->ServerConnectionDlg = NULL;
+    this->w_mainWindow = NULL;
+    this->w_serverConnection = NULL;
 }
 
 CGame::~CGame()
 {
     //dtor
 }
-
+void CGame::quit()
+{
+    m_running = false;
+}
 void CGame::connectToIp(unsigned int IP, std::string username, std::string password)
 {
     if(m_networkManager != NULL)
