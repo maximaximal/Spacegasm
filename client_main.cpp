@@ -2,7 +2,7 @@
 #include <SFML/Graphics.hpp>
 #include <CGame.h>
 
-using namespace std;
+sing namespace std;
 
 int main()
 {
