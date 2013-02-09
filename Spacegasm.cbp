@@ -75,6 +75,7 @@
 			<Add directory="include" />
 		</Compiler>
 		<Unit filename="client_main.cpp" />
+		<Unit filename="include/BitSize.h" />
 		<Unit filename="include/CGame.h" />
 		<Unit filename="include/CNetworkManager.h" />
 		<Unit filename="include/CPacketHandler.h" />
@@ -83,7 +84,19 @@
 		<Unit filename="include/CStringExt.h" />
 		<Unit filename="include/CTexture.h" />
 		<Unit filename="include/CTextureManager.h" />
+		<Unit filename="include/Component.h" />
+		<Unit filename="include/ComponentMapper.h" />
+		<Unit filename="include/ComponentType.h" />
+		<Unit filename="include/ComponentTypeManager.h" />
+		<Unit filename="include/DelayedEntityProcessingSystem.h" />
+		<Unit filename="include/DelayedEntitySystem.h" />
+		<Unit filename="include/Entity.h" />
+		<Unit filename="include/EntityManager.h" />
+		<Unit filename="include/EntityProcessingSystem.h" />
+		<Unit filename="include/EntitySystem.h" />
+		<Unit filename="include/GroupManager.h" />
 		<Unit filename="include/IPConverter.h" />
+		<Unit filename="include/ImmutableBag.h" />
 		<Unit filename="include/SFGUI/Adjustment.hpp" />
 		<Unit filename="include/SFGUI/Alignment.hpp" />
 		<Unit filename="include/SFGUI/Bin.hpp" />
@@ -138,10 +151,15 @@
 		<Unit filename="include/SFGUI/Viewport.hpp" />
 		<Unit filename="include/SFGUI/Widget.hpp" />
 		<Unit filename="include/SFGUI/Window.hpp" />
+		<Unit filename="include/SystemBitManager.h" />
+		<Unit filename="include/SystemManager.h" />
+		<Unit filename="include/TagManager.h" />
+		<Unit filename="include/TypeInfoComparator.h" />
 		<Unit filename="include/Windows/ConnectToServer.h" />
 		<Unit filename="include/Windows/Default.h" />
 		<Unit filename="include/Windows/MainMenu.h" />
 		<Unit filename="include/Windows/ServerConnection.h" />
+		<Unit filename="include/World.h" />
 		<Unit filename="include/pugiconfig.hpp" />
 		<Unit filename="include/pugixml.hpp" />
 		<Unit filename="src/CGame/CGame.cpp" />
