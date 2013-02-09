@@ -174,11 +174,25 @@
 		<Unit filename="src/CStringExt.cpp" />
 		<Unit filename="src/CTexture.cpp" />
 		<Unit filename="src/CTextureManager.cpp" />
+		<Unit filename="src/Component.cpp" />
+		<Unit filename="src/ComponentType.cpp" />
+		<Unit filename="src/ComponentTypeManager.cpp" />
+		<Unit filename="src/DelayedEntityProcessingSystem.cpp" />
+		<Unit filename="src/DelayedEntitySystem.cpp" />
+		<Unit filename="src/Entity.cpp" />
+		<Unit filename="src/EntityManager.cpp" />
+		<Unit filename="src/EntityProcessingSystem.cpp" />
+		<Unit filename="src/EntitySystem.cpp" />
+		<Unit filename="src/GroupManager.cpp" />
 		<Unit filename="src/IPConverter.cpp" />
+		<Unit filename="src/SystemBitManager.cpp" />
+		<Unit filename="src/SystemManager.cpp" />
+		<Unit filename="src/TagManager.cpp" />
 		<Unit filename="src/Windows/ConnectToServer.cpp" />
 		<Unit filename="src/Windows/Default.cpp" />
 		<Unit filename="src/Windows/MainMenu.cpp" />
 		<Unit filename="src/Windows/ServerConnection.cpp" />
+		<Unit filename="src/World.cpp" />
 		<Unit filename="src/pugixml.cpp" />
 		<Extensions>
 			<code_completion />
