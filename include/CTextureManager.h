@@ -19,6 +19,7 @@ class CTextureManager : public TSingleton<CTextureManager>
 
         void loadTexture(std::string filename, std::string textureID);
         sf::Texture* getTexture(std::string textureID);
+        sf::IntRect getRect(std::string textureID, std::string rect, unsigned int Number = 0);
         bool isFinished(std::string textureID);
         /**
             @brief Adds a sprite to the sprite-stack of the selected texture.

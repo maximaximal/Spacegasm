@@ -13,7 +13,7 @@ class CTexture
     public:
         CTexture();
         virtual ~CTexture();
-        sf::Texture& get();
+        sf::Texture& get(bool wait = true);
         /**
             @brief Loads the specified XML file and uses the contained info to load the texture in combination with the contained rectangles into the internal memory.
             @param filename The path to the XML file containing the texture-defining information.
@@ -28,6 +28,7 @@ class CTexture
             @brief Checks if the texture has finished loading.
             @return Finished-State
         **/
+        sf::IntRect getRect(std::string rect, unsigned int Number = 0);
         bool isFinished();
     protected:
     private:
@@ -39,7 +40,8 @@ class CTexture
         sf::Texture *m_texture;
         std::mutex m_dataMutex;
         std::mutex m_texMutex;
-        std::stack<sf::Sprite*> m_sprites;
+        std::mutex m_spriteMutex;
+        std::stack<SSpriteCache> m_sprites;
 
         std::map<std::string, std::map<unsigned int, sf::IntRect> > m_rectangles;
         bool m_finished;

@@ -13,27 +13,37 @@ CTextureManager::~CTextureManager()
 {
     //dtor
 }
-CTextureManager::loadTexture(std::string filename, std::string textureID)
+void CTextureManager::loadTexture(std::string filename, std::string textureID)
 {
-    if(CStringExt::getFileExtension(filename) == "xml")
+    if(m_textures.count(textureID) > 0)
     {
-        if(m_textures.count(textureID) > 0)
-        {
-            cout << "!! Texture named " << textureID << " is already loaded! Doing nothing...." << endl;
-            return;
-        }
-        else
-        {
-            shared_ptr<CTexture> texture(new CTexture());
-            std::thread texthread(&CTexture::load, texture.get(), filename);
-            m_textures.insert(pair<string, shared_ptr<CTexture> >(textureID, texture));
-            texture.reset();
-        }
+        cout << "!! Texture named " << textureID << " is already loaded! Doing nothing...." << endl;
+        return;
     }
     else
     {
-        cout << "!! Only load textures defined with XML!" << endl;
-        return;
+        shared_ptr<CTexture> texture(new CTexture());
+        std::thread texthread(&CTexture::load, texture.get(), filename);
+        m_textures.insert(pair<string, shared_ptr<CTexture> >(textureID, texture));
+        texture.reset();
+    }
+}
+sf::IntRect CTextureManager::getRect(std::string textureID, std::string rect, unsigned int Number)
+{
+    if(m_textures.count(textureID) > 0)
+    {
+        return m_textures[textureID]->getRect(rect, Number);
+    }
+}
+void CTextureManager::addSprite(std::string textureID, sf::Sprite *sprite, std::string textureRect, unsigned int textureNumber)
+{
+    if(m_textures.count(textureID) > 0)
+    {
+        m_textures[textureID]->addAfterloadSprite(sprite, textureRect, textureNumber);
+    }
+    else
+    {
+        cout << "!! There is no Texture named " << textureID << "!" << endl;
     }
 }
 void CTextureManager::setRenderWindow(sf::RenderWindow *window)

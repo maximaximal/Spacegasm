@@ -961,21 +961,23 @@
 	<CTextureManager.h>
 	<CStringContainer.h>
 
-1360254287 /home/max/Dokumente/Programmieren/Spacegasm/include/CTextureManager.h
+1360411181 /home/max/Dokumente/Programmieren/Spacegasm/include/CTextureManager.h
 	<CSingleton.h>
 	<map>
 	<string>
 	<CTexture.h>
 	<SFML/Graphics.hpp>
 	<mutex>
+	<memory>
 
 1360254287 /home/max/Dokumente/Programmieren/Spacegasm/include/CSingleton.h
 
-1360254287 /home/max/Dokumente/Programmieren/Spacegasm/include/CTexture.h
+1360411322 /home/max/Dokumente/Programmieren/Spacegasm/include/CTexture.h
 	<thread>
 	<mutex>
 	<string>
 	<stack>
+	<map>
 	<SFML/Graphics.hpp>
 
 1360323568 source:/home/max/Dokumente/Programmieren/Spacegasm/src/CGame/onRender.cpp
@@ -1022,19 +1024,25 @@
 	"CStringContainer.h"
 	<iostream>
 
-1360254287 source:/home/max/Dokumente/Programmieren/Spacegasm/src/CStringExt.cpp
+1360367595 source:/home/max/Dokumente/Programmieren/Spacegasm/src/CStringExt.cpp
 	"CStringExt.h"
 	<vector>
 
-1360254287 /home/max/Dokumente/Programmieren/Spacegasm/include/CStringExt.h
+1360367626 /home/max/Dokumente/Programmieren/Spacegasm/include/CStringExt.h
 	<string>
 	<vector>
 
-1360254287 source:/home/max/Dokumente/Programmieren/Spacegasm/src/CTexture.cpp
+1360411395 source:/home/max/Dokumente/Programmieren/Spacegasm/src/CTexture.cpp
 	"CTexture.h"
+	<CStringExt.h>
+	<pugixml.hpp>
+	<iostream>
 
-1360254287 source:/home/max/Dokumente/Programmieren/Spacegasm/src/CTextureManager.cpp
+1360411543 source:/home/max/Dokumente/Programmieren/Spacegasm/src/CTextureManager.cpp
 	"CTextureManager.h"
+	<iostream>
+	<CTexture.h>
+	<CStringExt.h>
 
 1360254287 source:/home/max/Dokumente/Programmieren/Spacegasm/src/IPConverter.cpp
 	"IPConverter.h"
