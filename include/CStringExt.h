@@ -10,6 +10,7 @@ class CStringExt
         CStringExt();
         virtual ~CStringExt();
         static std::vector<std::string> explode(const std::string& str, const char* ch);
+        static std::string getFileExtension(const std::string& FileName);
     protected:
     private:
 };

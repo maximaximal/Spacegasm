@@ -5,7 +5,7 @@
 		<Option title="Spacegasm-Server" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
-		<Option virtualFolders="src\;" />
+		<Option virtualFolders="src/;" />
 		<Build>
 			<Target title="Linux64Debug">
 				<Option output="../bin/Linux64Debug/Spacegasm-Server" prefix_auto="1" extension_auto="1" />
@@ -21,8 +21,8 @@
 				<Linker>
 					<Add option="`pkg-config --libs libenet`" />
 					<Add option="`pkg-config --libs sigc++-2.0`" />
-					<Add library="..\Data\Libraries_linux64\libsfml-system.so" />
-					<Add library="..\Data\Libraries_linux64\libsfml-network.so" />
+					<Add library="../Data/Libraries_linux64/libsfml-system.so" />
+					<Add library="../Data/Libraries_linux64/libsfml-network.so" />
 				</Linker>
 			</Target>
 			<Target title="Linux64Release">
@@ -39,8 +39,8 @@
 					<Add option="-s" />
 					<Add option="`pkg-config --libs libenet`" />
 					<Add option="`pkg-config --libs sigc++-2.0`" />
-					<Add library="..\Data\Libraries_linux64\libsfml-system.so" />
-					<Add library="..\Data\Libraries_linux64\libsfml-network.so" />
+					<Add library="../Data/Libraries_linux64/libsfml-system.so" />
+					<Add library="../Data/Libraries_linux64/libsfml-network.so" />
 				</Linker>
 			</Target>
 			<Target title="Windows32Debug">

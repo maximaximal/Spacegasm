@@ -34,6 +34,12 @@ vector<string> CStringExt::explode(const string& str, const char* ch)
     		next += *it;
     	}
     }
-
     return result;
+}
+//http://stackoverflow.com/a/4505931
+std::string CStringExt::getFileExtension(const std::string& FileName)
+{
+    if(FileName.find_last_of(".") != std::string::npos)
+        return FileName.substr(FileName.find_last_of(".")+1);
+    return "";
 }

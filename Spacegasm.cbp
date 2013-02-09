@@ -141,6 +141,7 @@
 		<Unit filename="include/Windows/ConnectToServer.h" />
 		<Unit filename="include/Windows/Default.h" />
 		<Unit filename="include/Windows/MainMenu.h" />
+		<Unit filename="include/Windows/ServerConnection.h" />
 		<Unit filename="include/pugiconfig.hpp" />
 		<Unit filename="include/pugixml.hpp" />
 		<Unit filename="src/CGame/CGame.cpp" />
@@ -156,9 +157,10 @@
 		<Unit filename="src/CTexture.cpp" />
 		<Unit filename="src/CTextureManager.cpp" />
 		<Unit filename="src/IPConverter.cpp" />
-		<Unit filename="src/MainMenu.cpp" />
 		<Unit filename="src/Windows/ConnectToServer.cpp" />
 		<Unit filename="src/Windows/Default.cpp" />
+		<Unit filename="src/Windows/MainMenu.cpp" />
+		<Unit filename="src/Windows/ServerConnection.cpp" />
 		<Unit filename="src/pugixml.cpp" />
 		<Extensions>
 			<code_completion />
