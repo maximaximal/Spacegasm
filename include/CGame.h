@@ -61,7 +61,9 @@ class CGame
         int m_state;
         bool m_running;
         bool m_createLobbyWindow;
+        std::string m_outputBuffer;
         std::mutex m_drawMutex;
+        std::mutex m_outputMutex;
 };
 
 #endif // CGAME_H

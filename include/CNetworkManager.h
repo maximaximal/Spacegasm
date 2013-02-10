@@ -41,7 +41,8 @@ class CNetworkManager : public CPacketSender
             sigc::signal<void, CNetworkManager*>& onConnectionSuccess() {return m_onConnectionSuccess;}
     protected:
     private:
-        std::string m_IP, m_username, m_password;
+        std::string m_IP, m_username;
+        std::string m_password;
         std::mutex *dataMutex;
         bool m_running;
         ENetAddress *m_address;

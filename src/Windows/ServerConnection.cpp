@@ -32,7 +32,6 @@ Window::ServerConnection::ServerConnection(sfg::Desktop *desktop, CGame *game) :
     ui_t_main->Attach(ui_btn_submit, sf::Rect<unsigned int>(1, 3, 1, 1));
 
     ui_consoleWindow->SetScrollbarPolicy( sfg::ScrolledWindow::HORIZONTAL_AUTOMATIC | sfg::ScrolledWindow::VERTICAL_ALWAYS );
-    m_consoleOutputConnection = game->getPacketHandler()->getEvent(PTYPE_CONSOLE_OUTPUT).connect(sigc::mem_fun(this, &Window::ServerConnection::onConsoleOutput));
     ui_b_scrolledConsole->Pack(ui_l_consoleContent);
     ui_btn_submit->GetSignal(sfg::Button::OnLeftClick).Connect(&Window::ServerConnection::on_submitButtonPressed, this);
     ui_window->SetTitle((*CStringContainer::Get())["CONNECT_TO_SERVER"]);
@@ -41,7 +40,7 @@ Window::ServerConnection::ServerConnection(sfg::Desktop *desktop, CGame *game) :
 
 Window::ServerConnection::~ServerConnection()
 {
-    m_consoleOutputConnection.disconnect();
+
 }
 
 void Window::ServerConnection::on_submitButtonPressed()
@@ -52,9 +51,7 @@ void Window::ServerConnection::on_submitButtonPressed()
     ui_e_console->SetText("");
     m_game->getPacketHandler()->sendPacket(packet, "", 0, true);
 }
-void Window::ServerConnection::onConsoleOutput(sf::Packet packet, ENetPeer *peer)
+void Window::ServerConnection::outputToConsole(std::string output)
 {
-    std::string output;
-    packet >> output;
     ui_l_consoleContent->SetText(((std::string)ui_l_consoleContent->GetText()).append(output));
 }

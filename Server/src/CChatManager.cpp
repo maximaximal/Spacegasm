@@ -25,7 +25,10 @@ void CChatManager::handleChatPacket(sf::Packet packet, ENetPeer *peer)
 {
     string msg, output;
     packet >> msg;
-    output.append(m_playerManager->getPlayer(peer)->getName()).append(" >> ").append(msg).append("\n");
+    output += m_playerManager->getPlayer(peer)->getName();
+    output += " >> ";
+    output += msg;
+    output += "\n";
     cout << "[CHAT] " << output;
     sf::Packet consoleOutput;
     consoleOutput << PTYPE_CONSOLE_OUTPUT << output;

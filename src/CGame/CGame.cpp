@@ -53,6 +53,9 @@ void CGame::onConsoleOutput(sf::Packet packet, ENetPeer* peer)
     string output = "";
     packet >> output;
     cout << "\x1b[36m" << output << "\x1b[0m";
+    m_outputMutex.lock();
+    m_outputBuffer += output;
+    m_outputMutex.unlock();
 }
 void CGame::lockDrawMutex()
 {

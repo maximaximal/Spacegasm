@@ -5,6 +5,7 @@
 		<Option title="Spacegasm-Client" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
+		<Option virtualFolders="Artemis C++/;" />
 		<Build>
 			<Target title="Linux64Debug">
 				<Option output="bin/Linux64Debug/Spacegasm-Client" prefix_auto="1" extension_auto="1" />
@@ -75,7 +76,9 @@
 			<Add directory="include" />
 		</Compiler>
 		<Unit filename="client_main.cpp" />
-		<Unit filename="include/BitSize.h" />
+		<Unit filename="include/BitSize.h">
+			<Option virtualFolder="Artemis C++/" />
+		</Unit>
 		<Unit filename="include/CGame.h" />
 		<Unit filename="include/CNetworkManager.h" />
 		<Unit filename="include/CPacketHandler.h" />
@@ -84,19 +87,43 @@
 		<Unit filename="include/CStringExt.h" />
 		<Unit filename="include/CTexture.h" />
 		<Unit filename="include/CTextureManager.h" />
-		<Unit filename="include/Component.h" />
-		<Unit filename="include/ComponentMapper.h" />
-		<Unit filename="include/ComponentType.h" />
-		<Unit filename="include/ComponentTypeManager.h" />
-		<Unit filename="include/DelayedEntityProcessingSystem.h" />
-		<Unit filename="include/DelayedEntitySystem.h" />
-		<Unit filename="include/Entity.h" />
-		<Unit filename="include/EntityManager.h" />
-		<Unit filename="include/EntityProcessingSystem.h" />
-		<Unit filename="include/EntitySystem.h" />
-		<Unit filename="include/GroupManager.h" />
+		<Unit filename="include/Component.h">
+			<Option virtualFolder="Artemis C++/" />
+		</Unit>
+		<Unit filename="include/ComponentMapper.h">
+			<Option virtualFolder="Artemis C++/" />
+		</Unit>
+		<Unit filename="include/ComponentType.h">
+			<Option virtualFolder="Artemis C++/" />
+		</Unit>
+		<Unit filename="include/ComponentTypeManager.h">
+			<Option virtualFolder="Artemis C++/" />
+		</Unit>
+		<Unit filename="include/DelayedEntityProcessingSystem.h">
+			<Option virtualFolder="Artemis C++/" />
+		</Unit>
+		<Unit filename="include/DelayedEntitySystem.h">
+			<Option virtualFolder="Artemis C++/" />
+		</Unit>
+		<Unit filename="include/Entity.h">
+			<Option virtualFolder="Artemis C++/" />
+		</Unit>
+		<Unit filename="include/EntityManager.h">
+			<Option virtualFolder="Artemis C++/" />
+		</Unit>
+		<Unit filename="include/EntityProcessingSystem.h">
+			<Option virtualFolder="Artemis C++/" />
+		</Unit>
+		<Unit filename="include/EntitySystem.h">
+			<Option virtualFolder="Artemis C++/" />
+		</Unit>
+		<Unit filename="include/GroupManager.h">
+			<Option virtualFolder="Artemis C++/" />
+		</Unit>
 		<Unit filename="include/IPConverter.h" />
-		<Unit filename="include/ImmutableBag.h" />
+		<Unit filename="include/ImmutableBag.h">
+			<Option virtualFolder="Artemis C++/" />
+		</Unit>
 		<Unit filename="include/SFGUI/Adjustment.hpp" />
 		<Unit filename="include/SFGUI/Alignment.hpp" />
 		<Unit filename="include/SFGUI/Bin.hpp" />
@@ -151,15 +178,25 @@
 		<Unit filename="include/SFGUI/Viewport.hpp" />
 		<Unit filename="include/SFGUI/Widget.hpp" />
 		<Unit filename="include/SFGUI/Window.hpp" />
-		<Unit filename="include/SystemBitManager.h" />
-		<Unit filename="include/SystemManager.h" />
-		<Unit filename="include/TagManager.h" />
-		<Unit filename="include/TypeInfoComparator.h" />
+		<Unit filename="include/SystemBitManager.h">
+			<Option virtualFolder="Artemis C++/" />
+		</Unit>
+		<Unit filename="include/SystemManager.h">
+			<Option virtualFolder="Artemis C++/" />
+		</Unit>
+		<Unit filename="include/TagManager.h">
+			<Option virtualFolder="Artemis C++/" />
+		</Unit>
+		<Unit filename="include/TypeInfoComparator.h">
+			<Option virtualFolder="Artemis C++/" />
+		</Unit>
 		<Unit filename="include/Windows/ConnectToServer.h" />
 		<Unit filename="include/Windows/Default.h" />
 		<Unit filename="include/Windows/MainMenu.h" />
 		<Unit filename="include/Windows/ServerConnection.h" />
-		<Unit filename="include/World.h" />
+		<Unit filename="include/World.h">
+			<Option virtualFolder="Artemis C++/" />
+		</Unit>
 		<Unit filename="include/pugiconfig.hpp" />
 		<Unit filename="include/pugixml.hpp" />
 		<Unit filename="src/CGame/CGame.cpp" />
@@ -174,25 +211,53 @@
 		<Unit filename="src/CStringExt.cpp" />
 		<Unit filename="src/CTexture.cpp" />
 		<Unit filename="src/CTextureManager.cpp" />
-		<Unit filename="src/Component.cpp" />
-		<Unit filename="src/ComponentType.cpp" />
-		<Unit filename="src/ComponentTypeManager.cpp" />
-		<Unit filename="src/DelayedEntityProcessingSystem.cpp" />
-		<Unit filename="src/DelayedEntitySystem.cpp" />
-		<Unit filename="src/Entity.cpp" />
-		<Unit filename="src/EntityManager.cpp" />
-		<Unit filename="src/EntityProcessingSystem.cpp" />
-		<Unit filename="src/EntitySystem.cpp" />
-		<Unit filename="src/GroupManager.cpp" />
+		<Unit filename="src/Component.cpp">
+			<Option virtualFolder="Artemis C++/" />
+		</Unit>
+		<Unit filename="src/ComponentType.cpp">
+			<Option virtualFolder="Artemis C++/" />
+		</Unit>
+		<Unit filename="src/ComponentTypeManager.cpp">
+			<Option virtualFolder="Artemis C++/" />
+		</Unit>
+		<Unit filename="src/DelayedEntityProcessingSystem.cpp">
+			<Option virtualFolder="Artemis C++/" />
+		</Unit>
+		<Unit filename="src/DelayedEntitySystem.cpp">
+			<Option virtualFolder="Artemis C++/" />
+		</Unit>
+		<Unit filename="src/Entity.cpp">
+			<Option virtualFolder="Artemis C++/" />
+		</Unit>
+		<Unit filename="src/EntityManager.cpp">
+			<Option virtualFolder="Artemis C++/" />
+		</Unit>
+		<Unit filename="src/EntityProcessingSystem.cpp">
+			<Option virtualFolder="Artemis C++/" />
+		</Unit>
+		<Unit filename="src/EntitySystem.cpp">
+			<Option virtualFolder="Artemis C++/" />
+		</Unit>
+		<Unit filename="src/GroupManager.cpp">
+			<Option virtualFolder="Artemis C++/" />
+		</Unit>
 		<Unit filename="src/IPConverter.cpp" />
-		<Unit filename="src/SystemBitManager.cpp" />
-		<Unit filename="src/SystemManager.cpp" />
-		<Unit filename="src/TagManager.cpp" />
+		<Unit filename="src/SystemBitManager.cpp">
+			<Option virtualFolder="Artemis C++/" />
+		</Unit>
+		<Unit filename="src/SystemManager.cpp">
+			<Option virtualFolder="Artemis C++/" />
+		</Unit>
+		<Unit filename="src/TagManager.cpp">
+			<Option virtualFolder="Artemis C++/" />
+		</Unit>
 		<Unit filename="src/Windows/ConnectToServer.cpp" />
 		<Unit filename="src/Windows/Default.cpp" />
 		<Unit filename="src/Windows/MainMenu.cpp" />
 		<Unit filename="src/Windows/ServerConnection.cpp" />
-		<Unit filename="src/World.cpp" />
+		<Unit filename="src/World.cpp">
+			<Option virtualFolder="Artemis C++/" />
+		</Unit>
 		<Unit filename="src/pugixml.cpp" />
 		<Extensions>
 			<code_completion />

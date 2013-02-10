@@ -17,7 +17,7 @@ namespace Window
             ServerConnection(sfg::Desktop *desktop, CGame *game);
             virtual ~ServerConnection();
 
-            void onConsoleOutput(sf::Packet packet, ENetPeer *peer);
+            void outputToConsole(std::string);
         protected:
             sfg::Table::Ptr ui_t_main;
             sfg::Label::Ptr ui_l_serverIPLabel;
@@ -32,7 +32,6 @@ namespace Window
             sfg::Label::Ptr ui_l_consoleContent;
             CGame *m_game;
 
-            sigc::connection m_consoleOutputConnection;
             void on_submitButtonPressed();
         private:
     };

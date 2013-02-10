@@ -21,6 +21,8 @@
 				<Linker>
 					<Add option="`pkg-config --libs libenet`" />
 					<Add option="`pkg-config --libs sigc++-2.0`" />
+					<Add option="`pkg-config --libs pqxx`" />
+					<Add option="`pkg-config --libs pq`" />
 					<Add library="../Data/Libraries_linux64/libsfml-system.so" />
 					<Add library="../Data/Libraries_linux64/libsfml-network.so" />
 				</Linker>
@@ -39,6 +41,8 @@
 					<Add option="-s" />
 					<Add option="`pkg-config --libs libenet`" />
 					<Add option="`pkg-config --libs sigc++-2.0`" />
+					<Add option="`pkg-config --libs pqxx`" />
+					<Add option="`pkg-config --libs pq`" />
 					<Add library="../Data/Libraries_linux64/libsfml-system.so" />
 					<Add library="../Data/Libraries_linux64/libsfml-network.so" />
 				</Linker>

@@ -15,4 +15,14 @@ void CGame::onUpdate()
         w_serverConnection = new Window::ServerConnection(m_desktop, this);
         m_createLobbyWindow = false;
     }
+    m_outputMutex.lock();
+    if(m_outputBuffer != "")
+    {
+        if(w_serverConnection != NULL)
+        {
+            w_serverConnection->outputToConsole(m_outputBuffer);
+            m_outputBuffer = "";
+        }
+    }
+    m_outputMutex.unlock();
 }
