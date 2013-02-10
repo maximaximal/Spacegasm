@@ -1,6 +1,7 @@
 #include "CPlayerManager.h"
 #include <iostream>
 #include <sstream>
+#include <CServerConfig.h>
 
 using namespace std;
 
@@ -26,7 +27,7 @@ void CPlayerManager::playerConnectHandler(sf::Packet packet, ENetPeer *peer)
     pack << PTYPE_CONSOLE_OUTPUT << msg.str();
     m_packetHandler->sendPacket(pack, "", 0, true);
     sf::Packet fullconnect;
-    fullconnect << PTYPE_FULLCONNECT << "HALLLLOOOOOOOO" << 0;
+    fullconnect << PTYPE_FULLCONNECT << CServerConfig::Get()->getServerMessage() << 0;
     m_packetHandler->sendPacket(fullconnect, username, 0, true);
     cout << msg.str();
 }

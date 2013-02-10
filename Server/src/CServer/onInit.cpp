@@ -2,6 +2,7 @@
 #include <iostream>
 #include <exception>
 #include <enet/enet.h>
+#include <CServerConfig.h>
 
 using namespace std;
 
@@ -32,6 +33,8 @@ void CServer::onInit()
     playerManager = new CPlayerManager(packetHandler);
     chatManager = new CChatManager(this, packetHandler, playerManager);
     peerManager = new CPeerManager(m_server);
+
+    CServerConfig::Get()->load();
 
     cout << "[SERVER] Initializing complete! Now running..." << endl;
     while(m_running)

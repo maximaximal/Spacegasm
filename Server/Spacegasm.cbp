@@ -101,8 +101,10 @@
 		<Unit filename="include/CPeerManager.h" />
 		<Unit filename="include/CPlayerManager.h" />
 		<Unit filename="include/CServer.h" />
+		<Unit filename="include/CServerConfig.h" />
 		<Unit filename="server_main.cpp" />
 		<Unit filename="src/CChatManager.cpp" />
+		<Unit filename="src/CConfig.cpp" />
 		<Unit filename="src/CPeerManager.cpp" />
 		<Unit filename="src/CPlayerManager.cpp" />
 		<Unit filename="src/CServer/CServer.cpp" />
