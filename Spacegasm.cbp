@@ -26,6 +26,7 @@
 					<Add library="Data/Libraries_linux64/libsfml-audio.so" />
 					<Add library="Data/Libraries_linux64/libsfml-network.so" />
 					<Add library="Data/Libraries_linux64/libsfgui.so" />
+					<Add library="Box2D/lib_linux64/libBox2D.a" />
 				</Linker>
 				<ExtraCommands>
 					<Add after="cp -r Data/ bin/Linux64Debug/" />
@@ -52,6 +53,7 @@
 					<Add library="Data/Libraries_linux64/libsfml-audio.so" />
 					<Add library="Data/Libraries_linux64/libsfml-network.so" />
 					<Add library="Data/Libraries_linux64/libsfgui.so" />
+					<Add library="Box2D/lib_linux64/libBox2D.a" />
 				</Linker>
 				<ExtraCommands>
 					<Add after="cp -r Data/ bin/Linux64Release/" />
@@ -74,6 +76,7 @@
 			<Add option="-fexceptions" />
 			<Add directory="SFML/include" />
 			<Add directory="include" />
+			<Add directory="Box2D/include" />
 		</Compiler>
 		<Unit filename="client_main.cpp" />
 		<Unit filename="include/BitSize.h">
@@ -99,6 +102,7 @@
 		<Unit filename="include/ComponentTypeManager.h">
 			<Option virtualFolder="External Libraries/Artemis C++/" />
 		</Unit>
+		<Unit filename="include/Components/Physics.h" />
 		<Unit filename="include/Components/Position.h" />
 		<Unit filename="include/DelayedEntityProcessingSystem.h">
 			<Option virtualFolder="External Libraries/Artemis C++/" />
@@ -226,6 +230,7 @@
 		<Unit filename="src/ComponentTypeManager.cpp">
 			<Option virtualFolder="External Libraries/Artemis C++/" />
 		</Unit>
+		<Unit filename="src/Components/Physics.cpp" />
 		<Unit filename="src/Components/Position.cpp" />
 		<Unit filename="src/DelayedEntityProcessingSystem.cpp">
 			<Option virtualFolder="External Libraries/Artemis C++/" />

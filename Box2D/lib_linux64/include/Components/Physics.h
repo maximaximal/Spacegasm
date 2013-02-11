@@ -1,19 +1,19 @@
 #ifndef PHYSICS_H
 #define PHYSICS_H
 
-#include <EntityProcessingSystem.h>
+#include <Component.h>
+#include <Box2D.h>
 
-namespace System
+namespace Component
 {
-    class Physics : public artemis::EntityProcessingSystem
+    class Physics
     {
         public:
-            Physics();
+            Physics(b2Body);
             virtual ~Physics();
         protected:
         private:
     };
 }
-
 
 #endif // PHYSICS_H
