@@ -102,8 +102,8 @@
 		<Unit filename="include/ComponentTypeManager.h">
 			<Option virtualFolder="External Libraries/Artemis C++/" />
 		</Unit>
+		<Unit filename="include/Components/Graphics.h" />
 		<Unit filename="include/Components/Physics.h" />
-		<Unit filename="include/Components/Position.h" />
 		<Unit filename="include/DelayedEntityProcessingSystem.h">
 			<Option virtualFolder="External Libraries/Artemis C++/" />
 		</Unit>
@@ -189,7 +189,6 @@
 		<Unit filename="include/SystemManager.h">
 			<Option virtualFolder="External Libraries/Artemis C++/" />
 		</Unit>
-		<Unit filename="include/Systems/Physics.h" />
 		<Unit filename="include/TagManager.h">
 			<Option virtualFolder="External Libraries/Artemis C++/" />
 		</Unit>
@@ -230,8 +229,8 @@
 		<Unit filename="src/ComponentTypeManager.cpp">
 			<Option virtualFolder="External Libraries/Artemis C++/" />
 		</Unit>
+		<Unit filename="src/Components/Graphics.cpp" />
 		<Unit filename="src/Components/Physics.cpp" />
-		<Unit filename="src/Components/Position.cpp" />
 		<Unit filename="src/DelayedEntityProcessingSystem.cpp">
 			<Option virtualFolder="External Libraries/Artemis C++/" />
 		</Unit>
@@ -260,7 +259,6 @@
 		<Unit filename="src/SystemManager.cpp">
 			<Option virtualFolder="External Libraries/Artemis C++/" />
 		</Unit>
-		<Unit filename="src/Systems/Physics.cpp" />
 		<Unit filename="src/TagManager.cpp">
 			<Option virtualFolder="External Libraries/Artemis C++/" />
 		</Unit>
