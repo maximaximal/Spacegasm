@@ -5,7 +5,7 @@
 
 void CGame::onInit()
 {
-    this->window = new sf::RenderWindow(sf::VideoMode(800, 600), "SFML-Sidescroller V2");
+    this->window = new sf::RenderWindow(sf::VideoMode(800, 600), "Spacegasm");
     this->m_state = CGame::State::GUI;
 
     this->window->resetGLStates();
