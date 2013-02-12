@@ -20,7 +20,7 @@ namespace Component
             void setTexture(std::string texture, std::string textureRect = "", unsigned int textureNumber = 0);
             void setTextureRect(std::string textureRect, unsigned int textureNumber = 0);
             void setPosition(sf::Vector2f pos);
-            void setPosition(float x, float y) {setPosition(sf::Vector2fx, y);}
+            void setPosition(float x, float y) {setPosition(sf::Vector2f(x, y));}
             void setRotation(float angle);
             void setOrigin(sf::Vector2f origin);
             void setOrigin(float x, float y) {setOrigin(sf::Vector2f(x, y));}

@@ -338,7 +338,7 @@
 	<string>
 	<vector>
 
-1360361473 /home/max/Dokumente/Programmieren/Spacegasm/include/CGame.h
+1360677919 /home/max/Dokumente/Programmieren/Spacegasm/include/CGame.h
 	<SFML/Graphics.hpp>
 	<thread>
 	<mutex>
@@ -929,14 +929,14 @@
 1360320553 /home/max/Dokumente/Programmieren/Spacegasm/include/Windows/Default.h
 	<SFGUI/SFGUI.hpp>
 
-1360361734 source:/home/max/Dokumente/Programmieren/Spacegasm/src/CGame/CGame.cpp
+1360677919 source:/home/max/Dokumente/Programmieren/Spacegasm/src/CGame/CGame.cpp
 	"CGame.h"
 	<iostream>
 	<CNetworkManager.h>
 	<sigc++/sigc++.h>
 	<IPConverter.h>
 
-1360254287 /home/max/Dokumente/Programmieren/Spacegasm/include/CNetworkManager.h
+1360677919 /home/max/Dokumente/Programmieren/Spacegasm/include/CNetworkManager.h
 	<string>
 	<enet/enet.h>
 	<SFML/Network.hpp>
@@ -955,13 +955,13 @@
 	<CGame.h>
 	<CNetworkManager.h>
 
-1360323824 source:/home/max/Dokumente/Programmieren/Spacegasm/src/CGame/onInit.cpp
+1360677919 source:/home/max/Dokumente/Programmieren/Spacegasm/src/CGame/onInit.cpp
 	<CGame.h>
 	<thread>
 	<CTextureManager.h>
 	<CStringContainer.h>
 
-1360411181 /home/max/Dokumente/Programmieren/Spacegasm/include/CTextureManager.h
+1360678076 /home/max/Dokumente/Programmieren/Spacegasm/include/CTextureManager.h
 	<CSingleton.h>
 	<map>
 	<string>
@@ -985,7 +985,7 @@
 	<iostream>
 	<CTextureManager.h>
 
-1360362879 source:/home/max/Dokumente/Programmieren/Spacegasm/src/CGame/onUpdate.cpp
+1360677919 source:/home/max/Dokumente/Programmieren/Spacegasm/src/CGame/onUpdate.cpp
 	<CGame.h>
 	<sigc++/sigc++.h>
 	<IPConverter.h>
@@ -1090,13 +1090,13 @@
 	<IPConverter.h>
 	<CGame.h>
 
-1360365136 /home/max/Dokumente/Programmieren/Spacegasm/include/Windows/ServerConnection.h
+1360677919 /home/max/Dokumente/Programmieren/Spacegasm/include/Windows/ServerConnection.h
 	<SFML/Network.hpp>
 	<enet/enet.h>
 	<sigc++/sigc++.h>
 	<Windows/Default.h>
 
-1360365890 source:/home/max/Dokumente/Programmieren/Spacegasm/src/Windows/ServerConnection.cpp
+1360677919 source:/home/max/Dokumente/Programmieren/Spacegasm/src/Windows/ServerConnection.cpp
 	"Windows/ServerConnection.h"
 	<CGame.h>
 	<CStringContainer.h>
@@ -3630,4 +3630,330 @@
 	<mutex>
 	<SFML/System.hpp>
 	<Component.h>
+
+1360677919 source:/home/max/Dokumente/Programmieren/Spacegasm/src/Component.cpp
+	"Component.h"
+	"World.h"
+
+1360677919 /home/max/Dokumente/Programmieren/Spacegasm/include/Component.h
+
+1360677919 /home/max/Dokumente/Programmieren/Spacegasm/include/World.h
+	"ImmutableBag.h"
+	"TagManager.h"
+	"GroupManager.h"
+
+1360677919 /home/max/Dokumente/Programmieren/Spacegasm/include/ImmutableBag.h
+	<cstddef>
+
+1360677919 /home/max/Dokumente/Programmieren/Spacegasm/include/TagManager.h
+	<map>
+	<string>
+
+1360677919 /home/max/Dokumente/Programmieren/Spacegasm/include/GroupManager.h
+	"ImmutableBag.h"
+	<map>
+	<string>
+
+1360677919 source:/home/max/Dokumente/Programmieren/Spacegasm/src/ComponentType.cpp
+	"ComponentType.h"
+
+1360677919 /home/max/Dokumente/Programmieren/Spacegasm/include/ComponentType.h
+	<bitset>
+	"BitSize.h"
+
+1360677919 /home/max/Dokumente/Programmieren/Spacegasm/include/BitSize.h
+
+1360677919 source:/home/max/Dokumente/Programmieren/Spacegasm/src/ComponentTypeManager.cpp
+	"ComponentTypeManager.h"
+
+1360677919 /home/max/Dokumente/Programmieren/Spacegasm/include/ComponentTypeManager.h
+	<assert.h>
+	<bitset>
+	"TypeInfoComparator.h"
+	"ComponentType.h"
+	"Component.h"
+	<map>
+
+1360677919 /home/max/Dokumente/Programmieren/Spacegasm/include/TypeInfoComparator.h
+	<typeinfo>
+
+1360677919 source:/home/max/Dokumente/Programmieren/Spacegasm/src/DelayedEntityProcessingSystem.cpp
+	"DelayedEntityProcessingSystem.h"
+
+1360677919 /home/max/Dokumente/Programmieren/Spacegasm/include/DelayedEntityProcessingSystem.h
+	"DelayedEntitySystem.h"
+
+1360677919 /home/max/Dokumente/Programmieren/Spacegasm/include/DelayedEntitySystem.h
+	"EntitySystem.h"
+
+1360677919 /home/max/Dokumente/Programmieren/Spacegasm/include/EntitySystem.h
+	<bitset>
+	"BitSize.h"
+	"Component.h"
+	<iostream>
+	<assert.h>
+	<typeinfo>
+	<bitset>
+	"ImmutableBag.h"
+	"ComponentTypeManager.h"
+
+1360677919 source:/home/max/Dokumente/Programmieren/Spacegasm/src/DelayedEntitySystem.cpp
+	"DelayedEntitySystem.h"
+	"World.h"
+
+1360677919 source:/home/max/Dokumente/Programmieren/Spacegasm/src/Entity.cpp
+	"Entity.h"
+	<sstream>
+	"Component.h"
+	"World.h"
+
+1360677919 /home/max/Dokumente/Programmieren/Spacegasm/include/Entity.h
+	<bitset>
+	<string>
+	<cstddef>
+	<typeinfo>
+	"BitSize.h"
+	"ImmutableBag.h"
+	"EntityManager.h"
+	"ComponentTypeManager.h"
+
+1360677919 /home/max/Dokumente/Programmieren/Spacegasm/include/EntityManager.h
+	"ImmutableBag.h"
+	"Component.h"
+	"ComponentTypeManager.h"
+
+1360677919 source:/home/max/Dokumente/Programmieren/Spacegasm/src/EntityManager.cpp
+	"EntityManager.h"
+	"EntitySystem.h"
+	"SystemManager.h"
+	"BitSize.h"
+	"World.h"
+	"Component.h"
+	"Entity.h"
+
+1360677919 /home/max/Dokumente/Programmieren/Spacegasm/include/SystemManager.h
+	<map>
+	"ImmutableBag.h"
+	"TypeInfoComparator.h"
+	<iostream>
+
+1360677919 source:/home/max/Dokumente/Programmieren/Spacegasm/src/EntityProcessingSystem.cpp
+	"EntityProcessingSystem.h"
+
+1360677919 /home/max/Dokumente/Programmieren/Spacegasm/include/EntityProcessingSystem.h
+	"ImmutableBag.h"
+	"EntitySystem.h"
+
+1360677919 source:/home/max/Dokumente/Programmieren/Spacegasm/src/EntitySystem.cpp
+	"EntitySystem.h"
+	"World.h"
+	"Entity.h"
+
+1360677919 source:/home/max/Dokumente/Programmieren/Spacegasm/src/GroupManager.cpp
+	"GroupManager.h"
+	"Entity.h"
+
+1360677919 source:/home/max/Dokumente/Programmieren/Spacegasm/src/SystemBitManager.cpp
+	"SystemBitManager.h"
+
+1360677919 /home/max/Dokumente/Programmieren/Spacegasm/include/SystemBitManager.h
+	<bitset>
+	<map>
+	"TypeInfoComparator.h"
+	"BitSize.h"
+
+1360677919 source:/home/max/Dokumente/Programmieren/Spacegasm/src/SystemManager.cpp
+	"SystemManager.h"
+	"World.h"
+	"EntitySystem.h"
+	"SystemBitManager.h"
+
+1360677919 source:/home/max/Dokumente/Programmieren/Spacegasm/src/TagManager.cpp
+	"TagManager.h"
+	"Entity.h"
+
+1360677919 source:/home/max/Dokumente/Programmieren/Spacegasm/src/World.cpp
+	"World.h"
+	"Entity.h"
+	"SystemManager.h"
+	"EntityManager.h"
+	"SystemBitManager.h"
+	"ComponentType.h"
+
+1360678151 source:/home/max/Dokumente/Programmieren/Spacegasm/src/Components/Graphics.cpp
+	"Components/Graphics.h"
+	<CTextureManager.h>
+
+1360677994 /home/max/Dokumente/Programmieren/Spacegasm/include/Components/Graphics.h
+	<string>
+	<mutex>
+	<Component.h>
+	<SFML/Graphics.hpp>
+
+1360677919 source:/home/max/Dokumente/Programmieren/Spacegasm/src/Components/Physics.cpp
+	"Components/Physics.h"
+
+1360677919 /home/max/Dokumente/Programmieren/Spacegasm/include/Components/Physics.h
+	<Box2D/Box2D.h>
+	<Component.h>
+
+1360677919 /home/max/Dokumente/Programmieren/Spacegasm/Box2D/include/Box2D/Box2D.h
+	<Box2D/Common/b2Settings.h>
+	<Box2D/Common/b2Draw.h>
+	<Box2D/Common/b2Timer.h>
+	<Box2D/Collision/Shapes/b2CircleShape.h>
+	<Box2D/Collision/Shapes/b2EdgeShape.h>
+	<Box2D/Collision/Shapes/b2ChainShape.h>
+	<Box2D/Collision/Shapes/b2PolygonShape.h>
+	<Box2D/Collision/b2BroadPhase.h>
+	<Box2D/Collision/b2Distance.h>
+	<Box2D/Collision/b2DynamicTree.h>
+	<Box2D/Collision/b2TimeOfImpact.h>
+	<Box2D/Dynamics/b2Body.h>
+	<Box2D/Dynamics/b2Fixture.h>
+	<Box2D/Dynamics/b2WorldCallbacks.h>
+	<Box2D/Dynamics/b2TimeStep.h>
+	<Box2D/Dynamics/b2World.h>
+	<Box2D/Dynamics/Contacts/b2Contact.h>
+	<Box2D/Dynamics/Joints/b2DistanceJoint.h>
+	<Box2D/Dynamics/Joints/b2FrictionJoint.h>
+	<Box2D/Dynamics/Joints/b2GearJoint.h>
+	<Box2D/Dynamics/Joints/b2WheelJoint.h>
+	<Box2D/Dynamics/Joints/b2MouseJoint.h>
+	<Box2D/Dynamics/Joints/b2PrismaticJoint.h>
+	<Box2D/Dynamics/Joints/b2PulleyJoint.h>
+	<Box2D/Dynamics/Joints/b2RevoluteJoint.h>
+	<Box2D/Dynamics/Joints/b2RopeJoint.h>
+	<Box2D/Dynamics/Joints/b2WeldJoint.h>
+
+1360677919 /home/max/Dokumente/Programmieren/Spacegasm/Box2D/include/Box2D/Common/b2Settings.h
+	<cassert>
+	<cmath>
+
+1360677919 /home/max/Dokumente/Programmieren/Spacegasm/Box2D/include/Box2D/Common/b2Draw.h
+	<Box2D/Common/b2Math.h>
+
+1360677919 /home/max/Dokumente/Programmieren/Spacegasm/Box2D/include/Box2D/Common/b2Math.h
+	<Box2D/Common/b2Settings.h>
+	<cmath>
+	<cfloat>
+	<cstddef>
+	<limits>
+
+1360677919 /home/max/Dokumente/Programmieren/Spacegasm/Box2D/include/Box2D/Common/b2Timer.h
+	<Box2D/Common/b2Settings.h>
+
+1360677919 /home/max/Dokumente/Programmieren/Spacegasm/Box2D/include/Box2D/Collision/Shapes/b2CircleShape.h
+	<Box2D/Collision/Shapes/b2Shape.h>
+
+1360677919 /home/max/Dokumente/Programmieren/Spacegasm/Box2D/include/Box2D/Collision/Shapes/b2Shape.h
+	<Box2D/Common/b2BlockAllocator.h>
+	<Box2D/Common/b2Math.h>
+	<Box2D/Collision/b2Collision.h>
+
+1360677919 /home/max/Dokumente/Programmieren/Spacegasm/Box2D/include/Box2D/Common/b2BlockAllocator.h
+	<Box2D/Common/b2Settings.h>
+
+1360677919 /home/max/Dokumente/Programmieren/Spacegasm/Box2D/include/Box2D/Collision/b2Collision.h
+	<Box2D/Common/b2Math.h>
+	<climits>
+
+1360677919 /home/max/Dokumente/Programmieren/Spacegasm/Box2D/include/Box2D/Collision/Shapes/b2EdgeShape.h
+	<Box2D/Collision/Shapes/b2Shape.h>
+
+1360677919 /home/max/Dokumente/Programmieren/Spacegasm/Box2D/include/Box2D/Collision/Shapes/b2ChainShape.h
+	<Box2D/Collision/Shapes/b2Shape.h>
+
+1360677919 /home/max/Dokumente/Programmieren/Spacegasm/Box2D/include/Box2D/Collision/Shapes/b2PolygonShape.h
+	<Box2D/Collision/Shapes/b2Shape.h>
+
+1360677919 /home/max/Dokumente/Programmieren/Spacegasm/Box2D/include/Box2D/Collision/b2BroadPhase.h
+	<Box2D/Common/b2Settings.h>
+	<Box2D/Collision/b2Collision.h>
+	<Box2D/Collision/b2DynamicTree.h>
+	<algorithm>
+
+1360677919 /home/max/Dokumente/Programmieren/Spacegasm/Box2D/include/Box2D/Collision/b2DynamicTree.h
+	<Box2D/Collision/b2Collision.h>
+	<Box2D/Common/b2GrowableStack.h>
+
+1360677919 /home/max/Dokumente/Programmieren/Spacegasm/Box2D/include/Box2D/Common/b2GrowableStack.h
+	<Box2D/Common/b2Settings.h>
+	<cstring>
+
+1360677919 /home/max/Dokumente/Programmieren/Spacegasm/Box2D/include/Box2D/Collision/b2Distance.h
+	<Box2D/Common/b2Math.h>
+
+1360677919 /home/max/Dokumente/Programmieren/Spacegasm/Box2D/include/Box2D/Collision/b2TimeOfImpact.h
+	<Box2D/Common/b2Math.h>
+	<Box2D/Collision/b2Distance.h>
+
+1360677919 /home/max/Dokumente/Programmieren/Spacegasm/Box2D/include/Box2D/Dynamics/b2Body.h
+	<Box2D/Common/b2Math.h>
+	<Box2D/Collision/Shapes/b2Shape.h>
+	<memory>
+
+1360677919 /home/max/Dokumente/Programmieren/Spacegasm/Box2D/include/Box2D/Dynamics/b2Fixture.h
+	<Box2D/Dynamics/b2Body.h>
+	<Box2D/Collision/b2Collision.h>
+	<Box2D/Collision/Shapes/b2Shape.h>
+
+1360677919 /home/max/Dokumente/Programmieren/Spacegasm/Box2D/include/Box2D/Dynamics/b2WorldCallbacks.h
+	<Box2D/Common/b2Settings.h>
+
+1360677919 /home/max/Dokumente/Programmieren/Spacegasm/Box2D/include/Box2D/Dynamics/b2TimeStep.h
+	<Box2D/Common/b2Math.h>
+
+1360677919 /home/max/Dokumente/Programmieren/Spacegasm/Box2D/include/Box2D/Dynamics/b2World.h
+	<Box2D/Common/b2Math.h>
+	<Box2D/Common/b2BlockAllocator.h>
+	<Box2D/Common/b2StackAllocator.h>
+	<Box2D/Dynamics/b2ContactManager.h>
+	<Box2D/Dynamics/b2WorldCallbacks.h>
+	<Box2D/Dynamics/b2TimeStep.h>
+
+1360677919 /home/max/Dokumente/Programmieren/Spacegasm/Box2D/include/Box2D/Common/b2StackAllocator.h
+	<Box2D/Common/b2Settings.h>
+
+1360677919 /home/max/Dokumente/Programmieren/Spacegasm/Box2D/include/Box2D/Dynamics/b2ContactManager.h
+	<Box2D/Collision/b2BroadPhase.h>
+
+1360677919 /home/max/Dokumente/Programmieren/Spacegasm/Box2D/include/Box2D/Dynamics/Contacts/b2Contact.h
+	<Box2D/Common/b2Math.h>
+	<Box2D/Collision/b2Collision.h>
+	<Box2D/Collision/Shapes/b2Shape.h>
+	<Box2D/Dynamics/b2Fixture.h>
+
+1360677919 /home/max/Dokumente/Programmieren/Spacegasm/Box2D/include/Box2D/Dynamics/Joints/b2DistanceJoint.h
+	<Box2D/Dynamics/Joints/b2Joint.h>
+
+1360677919 /home/max/Dokumente/Programmieren/Spacegasm/Box2D/include/Box2D/Dynamics/Joints/b2Joint.h
+	<Box2D/Common/b2Math.h>
+
+1360677919 /home/max/Dokumente/Programmieren/Spacegasm/Box2D/include/Box2D/Dynamics/Joints/b2FrictionJoint.h
+	<Box2D/Dynamics/Joints/b2Joint.h>
+
+1360677919 /home/max/Dokumente/Programmieren/Spacegasm/Box2D/include/Box2D/Dynamics/Joints/b2GearJoint.h
+	<Box2D/Dynamics/Joints/b2Joint.h>
+
+1360677919 /home/max/Dokumente/Programmieren/Spacegasm/Box2D/include/Box2D/Dynamics/Joints/b2WheelJoint.h
+	<Box2D/Dynamics/Joints/b2Joint.h>
+
+1360677919 /home/max/Dokumente/Programmieren/Spacegasm/Box2D/include/Box2D/Dynamics/Joints/b2MouseJoint.h
+	<Box2D/Dynamics/Joints/b2Joint.h>
+
+1360677919 /home/max/Dokumente/Programmieren/Spacegasm/Box2D/include/Box2D/Dynamics/Joints/b2PrismaticJoint.h
+	<Box2D/Dynamics/Joints/b2Joint.h>
+
+1360677919 /home/max/Dokumente/Programmieren/Spacegasm/Box2D/include/Box2D/Dynamics/Joints/b2PulleyJoint.h
+	<Box2D/Dynamics/Joints/b2Joint.h>
+
+1360677919 /home/max/Dokumente/Programmieren/Spacegasm/Box2D/include/Box2D/Dynamics/Joints/b2RevoluteJoint.h
+	<Box2D/Dynamics/Joints/b2Joint.h>
+
+1360677919 /home/max/Dokumente/Programmieren/Spacegasm/Box2D/include/Box2D/Dynamics/Joints/b2RopeJoint.h
+	<Box2D/Dynamics/Joints/b2Joint.h>
+
+1360677919 /home/max/Dokumente/Programmieren/Spacegasm/Box2D/include/Box2D/Dynamics/Joints/b2WeldJoint.h
+	<Box2D/Dynamics/Joints/b2Joint.h>
 

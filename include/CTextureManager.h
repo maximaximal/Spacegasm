@@ -18,7 +18,7 @@ class CTextureManager : public TSingleton<CTextureManager>
         void setRenderWindow(sf::RenderWindow *window);
 
         void loadTexture(std::string filename, std::string textureID);
-        sf::Texture* getTexture(std::string textureID);
+        sf::Texture& getTexture(std::string textureID);
         sf::IntRect getRect(std::string textureID, std::string rect, unsigned int Number = 0);
         bool isFinished(std::string textureID);
         /**

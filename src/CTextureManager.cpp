@@ -54,3 +54,14 @@ void CTextureManager::setWindowActive(bool active)
 {
     m_window->setActive(active);
 }
+sf::Texture& CTextureManager::getTexture(std::string textureID)
+{
+    if(m_textures.count(textureID) > 0)
+    {
+        return m_textures[textureID]->get();
+    }
+    else
+    {
+        cout << "!! There is no Texture named " << textureID << "!" << endl;
+    }
+}
