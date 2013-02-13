@@ -82,6 +82,7 @@
 		<Unit filename="include/BitSize.h">
 			<Option virtualFolder="External Libraries/Artemis C++/" />
 		</Unit>
+		<Unit filename="include/CContactListener.h" />
 		<Unit filename="include/CGame.h" />
 		<Unit filename="include/CNetworkManager.h" />
 		<Unit filename="include/CPacketHandler.h" />
@@ -129,6 +130,7 @@
 		<Unit filename="include/ImmutableBag.h">
 			<Option virtualFolder="External Libraries/Artemis C++/" />
 		</Unit>
+		<Unit filename="include/Physics.h" />
 		<Unit filename="include/SFGUI/Adjustment.hpp" />
 		<Unit filename="include/SFGUI/Alignment.hpp" />
 		<Unit filename="include/SFGUI/Bin.hpp" />
@@ -220,6 +222,7 @@
 		<Unit filename="src/CStringExt.cpp" />
 		<Unit filename="src/CTexture.cpp" />
 		<Unit filename="src/CTextureManager.cpp" />
+		<Unit filename="src/Collision/CContactListener.cpp" />
 		<Unit filename="src/Component.cpp">
 			<Option virtualFolder="External Libraries/Artemis C++/" />
 		</Unit>
@@ -259,6 +262,7 @@
 		<Unit filename="src/SystemManager.cpp">
 			<Option virtualFolder="External Libraries/Artemis C++/" />
 		</Unit>
+		<Unit filename="src/Systems/Physics.cpp" />
 		<Unit filename="src/TagManager.cpp">
 			<Option virtualFolder="External Libraries/Artemis C++/" />
 		</Unit>
