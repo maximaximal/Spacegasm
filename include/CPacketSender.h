@@ -3,6 +3,7 @@
 
 #include <SFML/Network.hpp>
 #include <string>
+#include <vector>
 
 class CPacketSender
 {
@@ -10,6 +11,8 @@ class CPacketSender
         CPacketSender() {}
         virtual ~CPacketSender() {}
         virtual void sendPacket(sf::Packet& packet, std::string username, unsigned int channel, bool relieable) = 0;
+        virtual void sendPacket(sf::Packet& packet, std::vector<std::string> username, unsigned int channel, bool relieable) = 0;
+ 
     protected:
     private:
 };

@@ -102,6 +102,15 @@ void CNetworkManager::sendPacket(sf::Packet& packet, std::string username, unsig
     enet_peer_send(m_peer, channel, enetPacket);
     enet_host_flush(m_client);
 }
+void CNetworkManager::sendPacket(sf::Packet& packet, std::vector<std::string> username, unsigned int channel, bool relieable)
+{
+    vector<string>::iterator it;
+    for(it = username.begin(); it != username.end(); ++it)
+    {
+        this->sendPacket(packet, *it, channel, relieable);
+    }
+}
+
 CNetworkManager::~CNetworkManager()
 {
     enet_peer_disconnect(m_peer, 0);

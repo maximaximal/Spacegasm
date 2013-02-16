@@ -30,3 +30,11 @@ void CServer::sendPacket(sf::Packet& packet, std::string username, unsigned int 
     }
     enet_host_flush(m_server);
 }
+void CServer::sendPacket(sf::Packet& packet, std::vector<std::string> username, unsigned int channel, bool relieable)
+{
+    vector<string>::iterator it;
+    for(it = username.begin(); it != username.end(); ++it)
+    {
+        this->sendPacket(packet, *it, channel, relieable);
+    }
+}

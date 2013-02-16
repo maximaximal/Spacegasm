@@ -9,6 +9,11 @@
 #define NET_PORT 17001
 #include <Windows/MainMenu.h>
 #include <Windows/ServerConnection.h>
+
+#include <World.h>
+#include <SystemManager.h>
+#include <EntityManager.h>
+
 class StartGame;
 class ServerConnection;
 class CNetworkManager;
@@ -51,6 +56,10 @@ class CGame
         sf::RenderWindow *window;
         sf::Clock *m_FrameClock;
         sf::Time *m_FrameTime;
+        //Artemis
+            artemis::World *m_world;
+            artemis::EntityManager *m_entityManager;
+            artemis::SystemManager *m_systemManager;
         Window::MainMenu *w_mainWindow;
         Window::ServerConnection *w_serverConnection;
         sfg::Desktop *m_desktop;

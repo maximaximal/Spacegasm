@@ -11,6 +11,7 @@ void CGame::onExit()
         delete w_mainWindow;
     if(w_serverConnection != NULL)
         delete w_serverConnection;
+    delete m_world;
     delete m_desktop;
     delete m_sfgui;
     delete this->window;

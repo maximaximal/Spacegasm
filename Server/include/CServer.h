@@ -11,6 +11,7 @@
 #include <CPacketHandler.h>
 #include <SFML/Network.hpp>
 #include <string>
+#include <vector>
 
 class CServer : public CPacketSender
 {
@@ -23,6 +24,7 @@ class CServer : public CPacketSender
         void onExit();
 
         virtual void sendPacket(sf::Packet& packet, std::string username, unsigned int channel, bool relieable);
+        virtual void sendPacket(sf::Packet& packet, std::vector<std::string> username, unsigned int channel, bool relieable); 
     protected:
     private:
         bool m_running;

@@ -2,6 +2,9 @@
 #include <thread>
 #include <CTextureManager.h>
 #include <CStringContainer.h>
+#include <World.h>
+#include <SystemManager.h>
+#include <EntityManager.h>
 
 void CGame::onInit()
 {
@@ -11,6 +14,10 @@ void CGame::onInit()
     this->window->resetGLStates();
 
     m_createLobbyWindow = false;
+
+    m_world = new artemis::World();
+    m_systemManager = m_world->getSystemManager();
+    m_entityManager = m_world->getEntityManager();
 
     CTextureManager::Get()->setRenderWindow(window);
 

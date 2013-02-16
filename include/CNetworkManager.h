@@ -8,6 +8,7 @@
 #include <CPacketSender.h>
 #include <thread>
 #include <mutex>
+#include <vector>
 
 class CGame;
 class CPacketHandler;
@@ -36,7 +37,8 @@ class CNetworkManager : public CPacketSender
         std::string getIP();
         std::string getUsername();
         virtual void sendPacket(sf::Packet& packet, std::string username, unsigned int channel, bool relieable);
-
+        virtual void sendPacket(sf::Packet& packet, std::vector<std::string> username, unsigned int channel, bool relieable);
+ 
         //Events
             sigc::signal<void, CNetworkManager*>& onConnectionSuccess() {return m_onConnectionSuccess;}
     protected:
