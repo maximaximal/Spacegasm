@@ -1,4 +1,5 @@
-/docs/
-/obj/
-/bin/
-/*.layout
+docs/
+obj/
+bin/
+*.layout
+*.swt
