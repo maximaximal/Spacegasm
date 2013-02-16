@@ -34,9 +34,13 @@ void Graphics::setOrigin(sf::Vector2f origin)
 {
     m_sprite->setOrigin(origin);
 }
-void Graphics::setRotation(sf::Vector2f rotation)
+void Graphics::setRotation(float rotation)
 {
-    m_sprite->setRotation(rotration)
+    m_sprite->setRotation(rotation);
+}
+void Graphics::setScale(sf::Vector2f scale)
+{
+    m_sprite->setScale(scale);
 }
 sf::Vector2f Graphics::getPosition()
 {
@@ -50,7 +54,7 @@ sf::Color Graphics::getColor()
 {
     return m_sprite->getColor();
 }
-float Graphics::getScale()
+sf::Vector2f Graphics::getScale()
 {
     return m_sprite->getScale();
 }

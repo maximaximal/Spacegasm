@@ -25,12 +25,12 @@ namespace Component
             void setOrigin(sf::Vector2f origin);
             void setOrigin(float x, float y) {setOrigin(sf::Vector2f(x, y));}
             void setColor(sf::Color color);
-            void setScale(float scale);
+            void setScale(sf::Vector2f scale);
 
             sf::Vector2f getPosition();
             sf::Vector2f getOrigin();
             sf::Color getColor();
-            float getScale();
+            sf::Vector2f getScale();
             float getRotation();
         protected:
         private:

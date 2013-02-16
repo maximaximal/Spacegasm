@@ -4,6 +4,7 @@
 #include <string>
 #include <map>
 #include <memory>
+#include <vector>
 
 #include <CPlayerData.h>
 #include <SFML/Network.hpp>
@@ -21,6 +22,8 @@ class CPlayerManager
         void removePlayer(std::string username);
         void removePlayer(ENetPeer *peer);
         void playerConnectHandler(sf::Packet packet, ENetPeer *peer);
+        
+        std::vector<std::string> onScreen(sf::FloatRect rect);
     protected:
     private:
         std::map<std::string, std::shared_ptr<CPlayerData> > m_players;

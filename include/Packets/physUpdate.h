@@ -11,7 +11,7 @@ namespace Packet
             b2Vec2 velocity;
             float angVelocity;
             float angle;
-    }
+    };
 }
 
 sf::Packet& operator <<(sf::Packet& p, const Packet::physUpdate& u)

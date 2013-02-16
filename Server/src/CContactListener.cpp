@@ -9,9 +9,9 @@
 //PhyUpdate Packet
 #include <Packets/physUpdate.h>
 
-CContactListener::CContactListener()
+CContactListener::CContactListener(CPacketSender *sender)
 {
-    //Nothing to do...
+    m_packetSender = sender;
 }
 
 CContactListener::~CContactListener()
@@ -35,8 +35,8 @@ void CContactListener::BeginContact(b2Contact *contact)
     void *dataB = bodyB->GetUserData();
 
     //Cast the void pointers of the userdata to entity-pointers.
-    Entity *entityA = static_cast<Entity*>(dataA);
-    Entity *entityB = static_cast<Entity*>(dataB);
+    artemis::Entity *entityA = static_cast<artemis::Entity*>(dataA);
+    artemis::Entity *entityB = static_cast<artemis::Entity*>(dataB);
 
     sf::Packet physUpdate;
     Packet::physUpdate phys;

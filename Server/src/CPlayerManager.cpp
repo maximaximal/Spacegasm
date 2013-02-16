@@ -77,3 +77,16 @@ void CPlayerManager::removePlayer(ENetPeer *peer)
 {
     removePlayer(m_peers.find(peer)->second);
 }
+std::vector<std::string> CPlayerManager::onScreen(sf::FloatRect rect)
+{
+    vector<std::string> users;
+    map<string, std::shared_ptr<CPlayerData> >::iterator it;
+    for(it = m_players.begin(); it != m_players.end(); ++it)
+    {
+        if(it->second->playerScreen.intersects(rect))
+        {
+            users.push_back(it->first);
+        }
+    }
+    return users;
+}

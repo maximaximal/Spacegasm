@@ -3,6 +3,7 @@
 
 #include <string>
 #include <mutex>
+#include <SFML/Graphics.hpp>
 #include <SFML/Network.hpp>
 #include <enet/enet.h>
 
@@ -25,6 +26,8 @@ class CPlayerData
         void setHighestScore(unsigned int score);
         void setAverageScore(unsigned int averageScore);
         void setPeer(ENetPeer *peer);
+
+        sf::FloatRect playerScreen;
     protected:
     private:
         std::string m_name;
