@@ -18,6 +18,8 @@ void CGame::onInit()
     m_world = new artemis::World();
     m_systemManager = m_world->getSystemManager();
     m_entityManager = m_world->getEntityManager();
+    
+    m_systemManager->initializeAll();
 
     CTextureManager::Get()->setRenderWindow(window);
 

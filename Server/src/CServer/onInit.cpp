@@ -33,6 +33,14 @@ void CServer::onInit()
     playerManager = new CPlayerManager(packetHandler);
     chatManager = new CChatManager(this, packetHandler, playerManager);
     peerManager = new CPeerManager(m_server);
+    
+    //Artemis
+    m_world = new artemis::World();
+    m_entityManager = m_world->getEntityManager();
+    m_systemManager = m_world->getSystemManager();
+
+    //Artemis System Initialization
+    m_systemManager->initializeAll();
 
     CServerConfig::Get()->load();
 

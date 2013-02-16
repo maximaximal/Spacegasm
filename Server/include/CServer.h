@@ -12,6 +12,10 @@
 #include <SFML/Network.hpp>
 #include <string>
 #include <vector>
+#include <World.h>
+#include <SystemManager.h>
+#include <EntityManager.h>
+
 
 class CServer : public CPacketSender
 {
@@ -34,6 +38,10 @@ class CServer : public CPacketSender
         CPacketHandler *packetHandler;
         ENetHost *m_server;
         ENetAddress *m_address;
+        //Artemis
+            artemis::World *m_world;
+            artemis::EntityManager *m_entityManager;
+            artemis::SystemManager *m_systemManager;
 };
 
 #endif // CSERVER_H
