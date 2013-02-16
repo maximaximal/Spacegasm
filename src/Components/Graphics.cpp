@@ -26,3 +26,35 @@ void Graphics::setTextureRect(std::string textureRect, unsigned int textureNumbe
 {
     m_sprite->setTextureRect(CTextureManager::Get()->getRect(m_texture, textureRect, textureNumber));
 }
+void Graphics::setPosition(sf::Vector2f pos)
+{
+    m_sprite->setPosition(pos);
+}
+void Graphics::setOrigin(sf::Vector2f origin)
+{
+    m_sprite->setOrigin(origin);
+}
+void Graphics::setRotation(sf::Vector2f rotation)
+{
+    m_sprite->setRotation(rotration)
+}
+sf::Vector2f Graphics::getPosition()
+{
+    return m_sprite->getPosition();
+}
+sf::Vector2f Graphics::getOrigin()
+{
+    return m_sprite->getOrigin();
+}
+sf::Color Graphics::getColor()
+{
+    return m_sprite->getColor();
+}
+float Graphics::getScale()
+{
+    return m_sprite->getScale();
+}
+float Graphics::getRotation()
+{
+    return m_sprite->getRotation();
+}
