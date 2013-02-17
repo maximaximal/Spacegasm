@@ -25,6 +25,7 @@
 					<Add option="`pkg-config --libs pq`" />
 					<Add library="../Data/Libraries_linux64/libsfml-system.so" />
 					<Add library="../Data/Libraries_linux64/libsfml-network.so" />
+					<Add library="../Box2D/lib_linux64/libBox2D.a" />
 				</Linker>
 			</Target>
 			<Target title="Linux64Release">
@@ -45,6 +46,7 @@
 					<Add option="`pkg-config --libs pq`" />
 					<Add library="../Data/Libraries_linux64/libsfml-system.so" />
 					<Add library="../Data/Libraries_linux64/libsfml-network.so" />
+					<Add library="../Box2D/lib_linux64/libBox2D.a" />
 				</Linker>
 			</Target>
 			<Target title="Windows32Debug">
@@ -64,6 +66,7 @@
 			<Add directory="../include" />
 			<Add directory="../SFML/include" />
 			<Add directory="include" />
+			<Add directory="../Box2D/include" />
 		</Compiler>
 		<Unit filename="../include/CGUIManager.h" />
 		<Unit filename="../include/CGame.h" />
@@ -96,6 +99,7 @@
 		<Unit filename="../src/EntitySystem.cpp" />
 		<Unit filename="../src/GroupManager.cpp" />
 		<Unit filename="../src/IPConverter.cpp" />
+		<Unit filename="../src/Packets/physUpdate.cpp" />
 		<Unit filename="../src/SystemBitManager.cpp" />
 		<Unit filename="../src/SystemManager.cpp" />
 		<Unit filename="../src/TagManager.cpp" />
@@ -106,10 +110,12 @@
 		<Unit filename="include/CPlayerManager.h" />
 		<Unit filename="include/CServer.h" />
 		<Unit filename="include/CServerConfig.h" />
+		<Unit filename="include/Systems/PhysicNetServer.h" />
 		<Unit filename="server_main.cpp" />
 		<Unit filename="src/CChatManager.cpp" />
 		<Unit filename="src/CConfig.cpp" />
 		<Unit filename="src/CPeerManager.cpp" />
+		<Unit filename="src/CPhysicsManagerServer.cpp" />
 		<Unit filename="src/CPlayerManager.cpp" />
 		<Unit filename="src/CServer/CServer.cpp" />
 		<Unit filename="src/CServer/onExit.cpp" />

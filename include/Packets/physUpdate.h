@@ -1,3 +1,6 @@
+#ifndef PACKET_PHYSUPDATE_H
+#define PACKET_PHYSUPDATE_H
+
 #include <SFML/Network.hpp>
 #include <Box2D/Box2D.h>
 
@@ -13,24 +16,7 @@ namespace Packet
             float angle;
     };
 }
+sf::Packet& operator <<(sf::Packet& p, const Packet::physUpdate& u);
+sf::Packet& operator >>(sf::Packet& p, Packet::physUpdate& u);
 
-sf::Packet& operator <<(sf::Packet& p, const Packet::physUpdate& u)
-{
-    p << u.entityID;
-    p << u.pos.x;
-    p << u.pos.y;
-    p << u.velocity.x;
-    p << u.velocity.y;
-    p << u.angVelocity;
-    p << u.angle;
-}
-sf::Packet& operator >>(sf::Packet& p, Packet::physUpdate& u)
-{
-    p >> u.entityID;
-    p >> u.pos.x;
-    p >> u.pos.y;
-    p >> u.velocity.x;
-    p >> u.velocity.y;
-    p >> u.angVelocity;
-    p >> u.angle;
-}
+#endif

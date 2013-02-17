@@ -15,7 +15,12 @@ Graphics::~Graphics()
 {
     delete m_sprite;
 }
-
+void Graphics::draw(sf::RenderTarget &target, sf::RenderStates states)
+{
+    m_spriteMutex.lock();
+    target.draw(*m_sprite, states);
+    m_spriteMutex.unlock();
+}
 void Graphics::setTexture(std::string texture, std::string textureRect, unsigned int textureNumber)
 {
     m_texture = texture;

@@ -82,11 +82,12 @@
 		<Unit filename="include/BitSize.h">
 			<Option virtualFolder="External Libraries/Artemis C++/" />
 		</Unit>
-		<Unit filename="include/CContactListener.h" />
 		<Unit filename="include/CGame.h" />
 		<Unit filename="include/CNetworkManager.h" />
 		<Unit filename="include/CPacketHandler.h" />
 		<Unit filename="include/CPacketSender.h" />
+		<Unit filename="include/CPhysicsManager.h" />
+		<Unit filename="include/CPhysicsManagerClient.h" />
 		<Unit filename="include/CStringContainer.h" />
 		<Unit filename="include/CStringExt.h" />
 		<Unit filename="include/CTexture.h" />
@@ -130,7 +131,7 @@
 		<Unit filename="include/ImmutableBag.h">
 			<Option virtualFolder="External Libraries/Artemis C++/" />
 		</Unit>
-		<Unit filename="include/Physics.h" />
+		<Unit filename="include/Packets/physUpdate.h" />
 		<Unit filename="include/SFGUI/Adjustment.hpp" />
 		<Unit filename="include/SFGUI/Alignment.hpp" />
 		<Unit filename="include/SFGUI/Bin.hpp" />
@@ -191,6 +192,8 @@
 		<Unit filename="include/SystemManager.h">
 			<Option virtualFolder="External Libraries/Artemis C++/" />
 		</Unit>
+		<Unit filename="include/Systems/PhysicNet.h" />
+		<Unit filename="include/Systems/Render.h" />
 		<Unit filename="include/TagManager.h">
 			<Option virtualFolder="External Libraries/Artemis C++/" />
 		</Unit>
@@ -218,11 +221,11 @@
 		<Unit filename="src/CGame/onUpdate.cpp" />
 		<Unit filename="src/CNetworkManager.cpp" />
 		<Unit filename="src/CPacketHandler.cpp" />
+		<Unit filename="src/CPhysicsManagerClient.cpp" />
 		<Unit filename="src/CStringContainer.cpp" />
 		<Unit filename="src/CStringExt.cpp" />
 		<Unit filename="src/CTexture.cpp" />
 		<Unit filename="src/CTextureManager.cpp" />
-		<Unit filename="src/Collision/CContactListener.cpp" />
 		<Unit filename="src/Component.cpp">
 			<Option virtualFolder="External Libraries/Artemis C++/" />
 		</Unit>
@@ -256,13 +259,15 @@
 			<Option virtualFolder="External Libraries/Artemis C++/" />
 		</Unit>
 		<Unit filename="src/IPConverter.cpp" />
+		<Unit filename="src/Packets/physUpdate.cpp" />
 		<Unit filename="src/SystemBitManager.cpp">
 			<Option virtualFolder="External Libraries/Artemis C++/" />
 		</Unit>
 		<Unit filename="src/SystemManager.cpp">
 			<Option virtualFolder="External Libraries/Artemis C++/" />
 		</Unit>
-		<Unit filename="src/Systems/Physics.cpp" />
+		<Unit filename="src/Systems/PhysicNet.cpp" />
+		<Unit filename="src/Systems/Render.cpp" />
 		<Unit filename="src/TagManager.cpp">
 			<Option virtualFolder="External Libraries/Artemis C++/" />
 		</Unit>

@@ -8,6 +8,12 @@ void CGame::onUpdate()
     *m_FrameTime = m_FrameClock->getElapsedTime();
     m_FrameClock->restart();
     m_desktop->Update(m_FrameTime->asSeconds());
+
+    m_world->loopStart();
+    m_world->setDelta(m_FrameTime->asMilliseconds());
+
+    m_physicNetSystem->process();
+
     if(m_createLobbyWindow)
     {
         delete w_mainWindow;

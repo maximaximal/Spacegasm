@@ -13,6 +13,9 @@
 #include <World.h>
 #include <SystemManager.h>
 #include <EntityManager.h>
+#include <CPhysicsManagerClient.h>
+#include <Systems/Render.h>
+#include <Systems/PhysicNet.h>
 
 class StartGame;
 class ServerConnection;
@@ -22,7 +25,8 @@ class CGame
 {
     public:
         enum State {
-            GUI
+            GUI,
+            Game
         };
         CGame();
         virtual ~CGame();
@@ -60,6 +64,10 @@ class CGame
             artemis::World *m_world;
             artemis::EntityManager *m_entityManager;
             artemis::SystemManager *m_systemManager;
+        //Systems
+            System::PhysicNet *m_physicNetSystem;
+            System::Render *m_renderSystem;
+        CPhysicsManagerClient *m_physicsManager;
         Window::MainMenu *w_mainWindow;
         Window::ServerConnection *w_serverConnection;
         sfg::Desktop *m_desktop;

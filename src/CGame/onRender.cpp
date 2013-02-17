@@ -14,6 +14,10 @@ void CGame::onRender()
         case CGame::State::GUI:
             m_sfgui->Display(*window);
             break;
+        case CGame::State::Game:
+            m_renderSystem->process();
+            m_sfgui->Display(*window);
+            break;
         default:
             cout << "\e[0;41mUnknown Game State!\e[0m" << endl;
     }

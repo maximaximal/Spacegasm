@@ -14,6 +14,7 @@ void CGame::onExit()
     delete m_world;
     delete m_desktop;
     delete m_sfgui;
+    delete m_physicsManager;
     delete this->window;
     delete m_networkManager;
     delete m_packetHandler;

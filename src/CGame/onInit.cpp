@@ -15,10 +15,14 @@ void CGame::onInit()
 
     m_createLobbyWindow = false;
 
+    m_physicsManager = new CPhysicsManagerClient();
+
     m_world = new artemis::World();
     m_systemManager = m_world->getSystemManager();
     m_entityManager = m_world->getEntityManager();
-    
+
+    m_physicNetSystem = (System::PhysicNet*) m_systemManager->setSystem(new System::PhysicNet(m_packetHandler, m_world, m_physicsManager));
+    m_renderSystem = (System::Render*) m_systemManager->setSystem(new System::Render(m_world, window));
     m_systemManager->initializeAll();
 
     CTextureManager::Get()->setRenderWindow(window);
