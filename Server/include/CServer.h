@@ -15,7 +15,8 @@
 #include <World.h>
 #include <SystemManager.h>
 #include <EntityManager.h>
-
+#include <CPhysicsManagerServer.h>
+#include <Systems/PhysicNetServer.h>
 
 class CServer : public CPacketSender
 {
@@ -28,7 +29,7 @@ class CServer : public CPacketSender
         void onExit();
 
         virtual void sendPacket(sf::Packet& packet, std::string username, unsigned int channel, bool relieable);
-        virtual void sendPacket(sf::Packet& packet, std::vector<std::string> username, unsigned int channel, bool relieable); 
+        virtual void sendPacket(sf::Packet& packet, std::vector<std::string> username, unsigned int channel, bool relieable);
     protected:
     private:
         bool m_running;
@@ -42,6 +43,9 @@ class CServer : public CPacketSender
             artemis::World *m_world;
             artemis::EntityManager *m_entityManager;
             artemis::SystemManager *m_systemManager;
+        //systems
+            System::PhysicNetServer *m_physicNetServer;
+        CPhysicsManagerServer *m_physicsManager;
 };
 
 #endif // CSERVER_H

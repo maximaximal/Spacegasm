@@ -19,8 +19,14 @@ class CServerConfig : public TSingleton<CServerConfig>
         virtual ~CServerConfig();
 
         std::string getServerMessage() {return m_serverMessage;}
+        int getGameLoopRate() {return m_gameLoopRate;}
+        int getPhysicsLoopRate() {return m_physicsLoopRate;}
+        int getPhysicNetworkRate() {return m_physicNetworkRate;}
     protected:
         std::string m_serverMessage;
+        int m_gameLoopRate;
+        int m_physicsLoopRate;
+        int m_physicNetworkRate;
     private:
 };
 

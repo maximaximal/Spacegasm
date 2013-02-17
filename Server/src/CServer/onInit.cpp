@@ -28,16 +28,20 @@ void CServer::onInit()
     }
     m_running = true;
 
+    m_physicsManager = new CPhysicsManagerServer();
+
     packetHandler = new CPacketHandler();
     packetHandler->setSender(this);
     playerManager = new CPlayerManager(packetHandler);
     chatManager = new CChatManager(this, packetHandler, playerManager);
     peerManager = new CPeerManager(m_server);
-    
+
     //Artemis
     m_world = new artemis::World();
     m_entityManager = m_world->getEntityManager();
     m_systemManager = m_world->getSystemManager();
+
+    m_physicNetServer = (System::PhysicNetServer*) m_systemManager->setSystem(new System::PhysicNetServer(m_world, ))
 
     //Artemis System Initialization
     m_systemManager->initializeAll();

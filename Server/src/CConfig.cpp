@@ -25,7 +25,9 @@ void CServerConfig::load()
     doc.load_file("serverConf.xml");
     pugi::xml_node config = doc.child("ServerConfig");
     m_serverMessage = config.child("ServerMessage").text().as_string();
-
+    m_gameLoopRate = config.child("GameLoopRate").text().as_integer();
+    m_physicsLoopRate = config.child("PhysicsLoopRate").text().as_integer();
+    m_physicNetworkRate = config.child("PhysicNetworkRate").text().as_integer();
     cout << "[SERVER] Loaded Config!" << endl;
 }
 void CServerConfig::create()
@@ -34,6 +36,9 @@ void CServerConfig::create()
     doc.append_child("ServerConfig");
     pugi::xml_node config = doc.child("ServerConfig");
     config.append_child("ServerMessage").text() = "Welcome to this new Spacegasm server!";
+    config.append_child("GameLoopRate").text() = "60";
+    config.append_child("PhysicsLooprate").text() = "60";
+    config.append_child("PhysicNetworkRate").text() = "20";
     doc.save_file("serverConf.xml");
     cout << "[SERVER] Created config file serverConf.xml!" << endl;
 }
