@@ -16,11 +16,12 @@
 #include <CPlayerManager.h>
 
 class CPacketHandler;
+class CServer;
 
 class CChatManager
 {
     public:
-        CChatManager(CPacketSender *sender, CPacketHandler *packetHandler, CPlayerManager *playerManager);
+        CChatManager(CPacketSender *sender, CPacketHandler *packetHandler, CPlayerManager *playerManager, CServer *server);
         virtual ~CChatManager();
         void handleChatPacket(sf::Packet packet, ENetPeer *peer);
     protected:
@@ -29,6 +30,7 @@ class CChatManager
         CPacketSender *m_packetSender;
         CPacketHandler *m_packetHandler;
         CPlayerManager *m_playerManager;
+        CServer *m_server;
 };
 
 #endif // CCHATMANAGER_H

@@ -3,7 +3,13 @@
 
 #include <thread>
 #include <mutex>
-#include <SFML/System.h>
+#include <SFML/System.hpp>
+#include <World.h>
+#include <SystemManager.h>
+#include <EntityManager.h>
+#include <CPhysicsManagerServer.h>
+#include <Systems/PhysicNetServer.h>
+#include <CPacketHandler.h>
 
 class CWorldLoop
 {
@@ -24,6 +30,13 @@ class CWorldLoop
             void onInit();
             void onUpdate();
             void onExit();
+        //Artemis
+            artemis::World *m_world;
+            artemis::EntityManager *m_entityManager;
+            artemis::SystemManager *m_systemManager;
+        //systems
+            System::PhysicNetServer *m_physicNetServer;
+        CPhysicsManagerServer *m_physicsManager;
 };
 
 #endif // CWORLDLOOP_H

@@ -91,6 +91,7 @@
 		<Unit filename="../src/Component.cpp" />
 		<Unit filename="../src/ComponentType.cpp" />
 		<Unit filename="../src/ComponentTypeManager.cpp" />
+		<Unit filename="../src/Components/Physics.cpp" />
 		<Unit filename="../src/DelayedEntityProcessingSystem.cpp" />
 		<Unit filename="../src/DelayedEntitySystem.cpp" />
 		<Unit filename="../src/Entity.cpp" />
@@ -107,9 +108,11 @@
 		<Unit filename="../src/pugixml.cpp" />
 		<Unit filename="include/CChatManager.h" />
 		<Unit filename="include/CPeerManager.h" />
+		<Unit filename="include/CPhysicsManagerServer.h" />
 		<Unit filename="include/CPlayerManager.h" />
 		<Unit filename="include/CServer.h" />
 		<Unit filename="include/CServerConfig.h" />
+		<Unit filename="include/CWorldLoop.h" />
 		<Unit filename="include/Systems/PhysicNetServer.h" />
 		<Unit filename="server_main.cpp" />
 		<Unit filename="src/CChatManager.cpp" />
@@ -121,6 +124,8 @@
 		<Unit filename="src/CServer/onExit.cpp" />
 		<Unit filename="src/CServer/onInit.cpp" />
 		<Unit filename="src/CServer/onUpdate.cpp" />
+		<Unit filename="src/CWorldLoop.cpp" />
+		<Unit filename="src/Systems/PhysicNetServer.cpp" />
 		<Extensions>
 			<code_completion />
 			<debugger />

@@ -12,7 +12,10 @@ CServer::~CServer()
 {
     //dtor
 }
-
+void CServer::stop()
+{
+    m_running = false;
+}
 void CServer::sendPacket(sf::Packet& packet, std::string username, unsigned int channel, bool relieable)
 {
     ENetPacket *enetPacket;

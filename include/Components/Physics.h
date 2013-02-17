@@ -6,7 +6,7 @@
 
 namespace Component
 {
-    class Physics
+    class Physics : public artemis::Component
     {
         public:
             Physics(b2BodyDef *bodydef, b2World *world);

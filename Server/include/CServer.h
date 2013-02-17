@@ -12,11 +12,7 @@
 #include <SFML/Network.hpp>
 #include <string>
 #include <vector>
-#include <World.h>
-#include <SystemManager.h>
-#include <EntityManager.h>
-#include <CPhysicsManagerServer.h>
-#include <Systems/PhysicNetServer.h>
+#include <CWorldLoop.h>
 
 class CServer : public CPacketSender
 {
@@ -27,6 +23,8 @@ class CServer : public CPacketSender
         void onInit();
         void onUpdate();
         void onExit();
+
+        void stop();
 
         virtual void sendPacket(sf::Packet& packet, std::string username, unsigned int channel, bool relieable);
         virtual void sendPacket(sf::Packet& packet, std::vector<std::string> username, unsigned int channel, bool relieable);
@@ -39,13 +37,7 @@ class CServer : public CPacketSender
         CPacketHandler *packetHandler;
         ENetHost *m_server;
         ENetAddress *m_address;
-        //Artemis
-            artemis::World *m_world;
-            artemis::EntityManager *m_entityManager;
-            artemis::SystemManager *m_systemManager;
-        //systems
-            System::PhysicNetServer *m_physicNetServer;
-        CPhysicsManagerServer *m_physicsManager;
+        CWorldLoop *m_worldLoop;
 };
 
 #endif // CSERVER_H

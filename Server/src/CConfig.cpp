@@ -25,9 +25,9 @@ void CServerConfig::load()
     doc.load_file("serverConf.xml");
     pugi::xml_node config = doc.child("ServerConfig");
     m_serverMessage = config.child("ServerMessage").text().as_string();
-    m_gameLoopRate = config.child("GameLoopRate").text().as_integer();
-    m_physicsLoopRate = config.child("PhysicsLoopRate").text().as_integer();
-    m_physicNetworkRate = config.child("PhysicNetworkRate").text().as_integer();
+    m_gameLoopRate = config.child("GameLoopRate").text().as_int();
+    m_physicsLoopRate = config.child("PhysicsLoopRate").text().as_int();
+    m_physicNetworkRate = config.child("PhysicNetworkRate").text().as_int();
     cout << "[SERVER] Loaded Config!" << endl;
 }
 void CServerConfig::create()
