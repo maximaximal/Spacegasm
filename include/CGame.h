@@ -56,7 +56,7 @@ class CGame
         sf::RenderWindow *window;
         sf::Clock *m_FrameClock;
         sf::Time *m_FrameTime;
-        //Artemis 
+        //Artemis
             artemis::World *m_world;
             artemis::EntityManager *m_entityManager;
             artemis::SystemManager *m_systemManager;
