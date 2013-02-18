@@ -1,3 +1,7 @@
+Repository
+==========
+This is no longer an active development repository, because we moved spacegasm to a new repo on bitbucket. please follow our development-tweets and blog-updates to keep up to date :D
+
 Spacegasm
 =========
 This game is still in early development and there isn't really a plan how this is going to turn out after some time, so please be patient and keep looking up this site!
