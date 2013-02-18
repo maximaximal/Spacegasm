@@ -46,13 +46,13 @@ void CWorldLoop::onInit()
 {
     m_physicsManager = new CPhysicsManagerServer();
     m_physicsManager->start();
-    
+
     //Artemis
     m_world = new artemis::World();
     m_entityManager = m_world->getEntityManager();
     m_systemManager = m_world->getSystemManager();
 
-    m_physicNetServer = (System::PhysicNetServer*) m_systemManager->setSystem(new System::PhysicNetServer(m_world, m_physicsManager));
+    m_physicNetServer = (System::PhysicNetServer*) m_systemManager->setSystem(new System::PhysicNetServer(m_world, m_physicsManager, m_packetHandler));
 
     //Artemis System Initialization
     m_systemManager->initializeAll();

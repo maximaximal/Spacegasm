@@ -17,3 +17,16 @@ b2Body* Physics::getBody()
 {
     return m_body;
 }
+bool Physics::isDirty()
+{
+    m_dirtyMutex.lock();
+    bool dirty = m_dirty;
+    m_dirtyMutex.unlock();
+    return dirty;
+}
+void Physics::setDirty(bool dirty)
+{
+    m_dirtyMutex.lock();
+    m_dirty = dirty;
+    m_dirtyMutex.unlock();
+}

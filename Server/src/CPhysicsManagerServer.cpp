@@ -8,6 +8,7 @@ using namespace std;
 CPhysicsManagerServer::CPhysicsManagerServer() : CPhysicsManager()
 {
     m_stepThread = NULL;
+    m_contactListener = NULL;
     m_running = false;
 }
 CPhysicsManagerServer::~CPhysicsManagerServer()
@@ -37,6 +38,8 @@ sf::Time CPhysicsManagerServer::getStepTime()
 void CPhysicsManagerServer::stepThread()
 {
     bool running = true;
+    m_contactListener = new CContactListener();
+    m_world->SetContactListener(m_contactListener);
     sf::Clock clock;
     clock.restart();
     sf::Time time = sf::Time::Zero;
@@ -59,4 +62,5 @@ void CPhysicsManagerServer::stepThread()
 
         sf::sleep(sf::seconds(1.0 / CServerConfig::Get()->getPhysicsLoopRate() - time.asSeconds()));
     }
+    delete m_contactListener;
 }

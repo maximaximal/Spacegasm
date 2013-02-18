@@ -3,6 +3,8 @@
 #include <mutex>
 #include <CPhysicsManager.h>
 #include <SFML/System.hpp>
+#include <CContactListener.h>
+
 class CPhysicsManagerServer : public CPhysicsManager
 {
     public:
@@ -20,4 +22,5 @@ class CPhysicsManagerServer : public CPhysicsManager
         std::mutex m_timeMutex;
         sf::Time m_stepTime;
         bool m_running;
+        CContactListener *m_contactListener;
 };

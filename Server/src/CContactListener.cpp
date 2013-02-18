@@ -2,6 +2,7 @@
 
 //Artemis
 #include <Entity.h>
+#include <Components/Physics.h>
 
 //SFML-Network
 #include <SFML/Network.hpp>
@@ -9,9 +10,9 @@
 //PhyUpdate Packet
 #include <Packets/physUpdate.h>
 
-CContactListener::CContactListener(CPacketSender *sender)
+CContactListener::CContactListener()
 {
-    m_packetSender = sender;
+
 }
 
 CContactListener::~CContactListener()
@@ -38,30 +39,8 @@ void CContactListener::BeginContact(b2Contact *contact)
     artemis::Entity *entityA = static_cast<artemis::Entity*>(dataA);
     artemis::Entity *entityB = static_cast<artemis::Entity*>(dataB);
 
-    sf::Packet physUpdate;
-    Packet::physUpdate phys;
-
-    //Set physUpdate for BodyA
-    phys.pos = bodyA->GetPosition();
-    phys.velocity = bodyA->GetLinearVelocity();
-    phys.angle = bodyA->GetAngle();
-    phys.angVelocity = bodyA->GetAngularVelocity();
-    phys.entityID = entityA->getId();
-    //Send Update for BodyA
-    physUpdate << phys;
-    m_packetSender->sendPacket(physUpdate, "", 1, false);
-
-    physUpdate.clear();
-
-    //Set physUpdate for BodyB
-    phys.pos = bodyB->GetPosition();
-    phys.velocity = bodyB->GetLinearVelocity();
-    phys.angle = bodyB->GetAngle();
-    phys.angVelocity = bodyB->GetAngularVelocity();
-    phys.entityID = entityB->getId();
-    //Send Update for BodyB
-    physUpdate << phys;
-    m_packetSender->sendPacket(physUpdate, "", 1, false);
+    static_cast<Component::Physics*>(entityA->getComponent<Component::Physics>())->setDirty(true);
+    static_cast<Component::Physics*>(entityB->getComponent<Component::Physics>())->setDirty(true); 
 }
 void CContactListener::EndContact(b2Contact *contact)
 {
