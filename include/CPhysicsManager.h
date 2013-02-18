@@ -27,7 +27,7 @@ class CPhysicsManager
         {
             return m_world;
         }
-    private:
+    protected:
         b2World *m_world;
         std::mutex m_worldMutex;
 };

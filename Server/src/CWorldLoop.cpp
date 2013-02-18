@@ -45,6 +45,8 @@ void CWorldLoop::stop()
 void CWorldLoop::onInit()
 {
     m_physicsManager = new CPhysicsManagerServer();
+    m_physicsManager->start();
+    
     //Artemis
     m_world = new artemis::World();
     m_entityManager = m_world->getEntityManager();

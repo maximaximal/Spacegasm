@@ -2,21 +2,22 @@
 #include <thread>
 #include <mutex>
 #include <CPhysicsManager.h>
-
+#include <SFML/System.hpp>
 class CPhysicsManagerServer : public CPhysicsManager
 {
     public:
         CPhysicsManagerServer();
         virtual ~CPhysicsManagerServer();
 
-        void init();
+        void start();
+        void stop();
 
-        b2World* getWorld();
-
-        void lock();
-        void unlock();
+        sf::Time getStepTime();
     private:
-        b2World *m_world;
-        std::mutex m_worldMutex;
-        std::thread m_stepThread;
+        void stepThread();
+        std::thread *m_stepThread;
+        std::mutex m_runningMutex;
+        std::mutex m_timeMutex;
+        sf::Time m_stepTime;
+        bool m_running;
 };

@@ -37,7 +37,7 @@ void CServerConfig::create()
     pugi::xml_node config = doc.child("ServerConfig");
     config.append_child("ServerMessage").text() = "Welcome to this new Spacegasm server!";
     config.append_child("GameLoopRate").text() = "60";
-    config.append_child("PhysicsLooprate").text() = "60";
+    config.append_child("PhysicsLoopRate").text() = "60";
     config.append_child("PhysicNetworkRate").text() = "20";
     doc.save_file("serverConf.xml");
     cout << "[SERVER] Created config file serverConf.xml!" << endl;
