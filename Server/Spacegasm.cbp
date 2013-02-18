@@ -117,6 +117,7 @@
 		<Unit filename="server_main.cpp" />
 		<Unit filename="src/CChatManager.cpp" />
 		<Unit filename="src/CConfig.cpp" />
+		<Unit filename="src/CContactListener.cpp" />
 		<Unit filename="src/CPeerManager.cpp" />
 		<Unit filename="src/CPhysicsManagerServer.cpp" />
 		<Unit filename="src/CPlayerManager.cpp" />
